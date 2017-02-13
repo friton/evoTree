@@ -1,10 +1,15 @@
 \select@language {french}
 \contentsline {section}{\numberline {1}Contexte biologique}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
 \contentsline {section}{\numberline {2}Analyse des besoins}{2}
-\contentsline {subsection}{\numberline {2.1}Besoins sp\IeC {\'e}cifiques du projet}{2}
-\contentsline {subsection}{\numberline {2.2}Caract\IeC {\'e}ristiques du logiciel \IeC {\`a} mettre en place}{3}
+\contentsline {subsection}{\numberline {2.1}Caract\IeC {\'e}ristiques de la plateforme \IeC {\`a} mettre en place}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {subsection}{\numberline {2.2}Outils utilis\IeC {\'e}s pour r\IeC {\'e}pondre aux besoins}{2}
 \contentsline {subsection}{\numberline {2.3}Ordre de priorit\IeC {\'e}}{3}
-\contentsline {subsection}{\numberline {2.4}Outils utilis\IeC {\'e}s pour r\IeC {\'e}pondre aux besoins}{3}
 \contentsline {section}{\numberline {3}Analyse de l'existant}{3}
 \contentsline {subsection}{\numberline {3.1}TimeTree}{3}
 \contentsline {subsection}{\numberline {3.2}Onezoom}{3}
