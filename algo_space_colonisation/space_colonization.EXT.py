@@ -208,8 +208,8 @@ if __name__ == "__main__":
     else:
         
  #       print "generating 1000 random attr points"
-        for i in range(3000):
-            x = (random() * 3000.)
+        for i in range(10000):
+            x = (random() * 10000.)
             y = (random() * 500.)-250.
             z = 0#(random() * 100.) - 50.
             
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     
     Center=tree_point(-1.,0.,0.,0,None)
     PROBA_XTINCT = [0.75,0.65,0.75]
-    SEUIL_XTINCT = [500,1000,2500]
+    SEUIL_XTINCT = [1500,5000,8000]
 
 
     j = 0
