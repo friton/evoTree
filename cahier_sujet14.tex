@@ -29,7 +29,7 @@
 
 \begin{figure}[!t]
 	\centering
-	\includegraphics[width=6cm]{ucbl.png}
+	\includegraphics[width=6cm]{ucbl.jpg}
 	\hspace{\fill}
 	\includegraphics[width=2cm]{lbbe.png}
 \end{figure}
@@ -105,7 +105,7 @@
 
 \section{Analyse de l'existant}
 \paragraph{}
-Il existe sur internet des réalisations dont notre projet est inspiré. Nous avons également à disposition l'algorithme de M.WANDRILLE qui permet de dessiner de manière réaliste des arbres en trois dimensions.     
+Il existe sur internet des réalisations dont notre projet est inspiré. Nous avons également à disposition l'algorithme de M.DUCHEMIN qui permet de dessiner de manière réaliste des arbres en deux ou trois dimensions.     
 	      	 
 
 	\subsection{If the moon were only one pixel}
@@ -132,7 +132,35 @@ Il existe sur internet des réalisations dont notre projet est inspiré. Nous av
 
 	\subsection{Algorithme de colonisation de l'espace}
 	\paragraph{}
+	Cet algorithme est un algorithme utilisé dans les jeux vidéos pour fabriquer un arbre réaliste de manière aléatoire. Dans notre cas, il nous est demandé de le modifier et de l’adapter à la création d’un arbre de la Vie démarrant  de l’origine de la vie et allant jusqu’à notre époque.
+	\paragraph{}
+	Deux possibilité s’offre à nous :  recoder l’algorithme en partant du départ ou utiliser un algorithme déjà écrit par Wandrille Duchemin en le modifiant pour les besoins du projet, cet algorithme prend déjà en compte la possibilité d’ajouter des extinctions d’espèces à des moments indiqués dans le script :
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=9cm]{multipleExtinction.png}
+		\caption{Exemple d'arbre obtenu avec l'agorithme fourni}
+	\end{figure}
+	\paragraph{}
+	Le fonctionnement de l’algorithme de base est décrit dans le papier Modeling Trees with a Space Colonization Algorithm (\href{http://algorithmicbotany.org/papers/colonization.egwnp2007.pdf}{\emph{Runions et al, 2007}})
+	\paragraph{}
+	L’algorithme se déroule en différentes  phases :
+	\begin{enumerate}
+		\item Création d’une zone que l’on remplis avec des points d’attractions de manière aléatoire (par exemple un rectangle de 200 de largeur sur 1000 de longueur). 
+		\item Positionnement de notre point arbre (branche) de départ (pour nous en x=0 et y =0).
+		A ce moment on a quelque chose qui ressemble à cela :
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=14cm]{sc.jpg}
+		\end{figure}
+		\item Ensuite pour chaque point d’attraction on récupère la branche la plus proche présente dans son rayon d’attraction. Si cette branche est dans un « rayon minimum » par rapport au point d’attraction ce dernier devient inactif.
 
+		\item On calcul alors un vecteur pour chaque branche en prenant en compte tout les points d’attractions de la manière suivante (chaque vecteur dépend des points d’attraction et du vecteur d’avant) et ont crée le nœud fils qui suit le vecteur : 
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=9cm]{sc2.jpg}
+		\end{figure}
+		\item On fait cela en boucle jusqu’à ce qu’il n’y es plus de possibilité de croître ou que la boucle atteigne son maximum.
+	\end{enumerate}
 
 
 \section{Déroulement du projet}
