@@ -48,7 +48,7 @@ class attr_point(point3d):
         m = self.max_r
         
         mi = None
-        if self.x <= max_x+self.max_r+1 and self.x >= min_x:
+	if self.x <= max_x+self.max_r+1 and self.x >= min_x:
             for i,p in enumerate(lp):
                 d = self.dist_from(p)
             
