@@ -5,7 +5,6 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{hyperref}
 \pagestyle{fancy}
 
 % définir les entêtes et pieds de page
@@ -65,7 +64,7 @@
 	\end{figure}
 
 	\paragraph{}
-	Les trois chercheurs de l'Équipe Bioinformatique, Phylogénie et Génomique Évolutive à LBBE (UCBL Lyon 1), D. M. de Vienne, J.-P. Flandrois et L. Guéguen se sont interessés à la sensibilisation de cette vision plus cohérente chez le grand public.
+	Les trois chercheurs de l'Équipe Bioinformatique, Phylogénie et Génomique Évolutive à LBBE (UCBL Lyon 1), D. M. de Vienne, J.-P. Flandrois et L. Guéguen se sont interessés à la sensibilisation de ce grandes extinctions sur la biodiversité pour le grand public.
 
 \section{Analyse des besoins}
 
@@ -109,31 +108,22 @@ Il existe sur internet des réalisations dont notre projet est inspiré. Nous av
 	      	 
 
 	\subsection{If the moon were only one pixel}
-	 (\href{http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html}{\emph{visiter le site}}) 
 	\paragraph{}
 	L’idée de ce projet est de faire prendre conscience au grand public de l'immensité du vide qui nous entoure. Ainsi l'utilisateur se déplace dans le système solaire en scrollant horizontalement. C'est en quelque sorte une carte du système solaire à l'échelle : diamètre de la lune = 1 pixel. Une échelle graduée nous accompagne lors de ce voyage dans l'espace afin d'accentuer la grandeur de ses distances. L'utilisateur s’aperçoit alors très vite que la majorité du système solaire est constitué de vide. Pour rendre l'expérience plus ludique, les développeurs ont eu la bonne idée de combler le vide par des petits messages informatifs, parfois à ton humoristique. Il nous est aussi possible de voyager à la vitesse de la lumière, on se rend alors compte que même à cette vitesse le voyage est très long.         
  		
 	\subsection{TimeTree}
-	(\href{http://deeptime.info/}{\emph{visiter le site}})
 	\paragraph{}
 	Ce projet a pour objectif de représenter l'histoire de la Terre. Les 4,5 milliards d'années de son existence sont symbolisées par le tour d'une horloge. On peut alors situer dessus les grandes ères géologiques, d'important événements géologiques (formation de la lune par exemple) ainsi que les groupes biologiques qui ont été importants dans l'évolution de la Vie. Le site est interactif, en cliquant sur le nom d'une ère par exemple, on est alors redirigé vers une information reliée.      
 	
 
 
 	\subsection{Onezoom}
-	(\href{http://www.onezoom.org/}{\emph{visiter le site}})
 	\paragraph{}
-	Ici le but de ce site web est d'illustrer l'arbre de la Vie depuis son apparition sur notre planète. Un arbre en forme de spirale représente la phylogénie de toutes les espèces. On y voit alors les relations entre espèces et on prend conscience de la diversité biologique par la taille et le nombre de ramification de cette arbre. On peut se déplacer dans cette spirale en zoomant et cliquant sur les espèces qui nous intéresse pour avoir plus d'informations sur ces dernières.    	
+	Ici le but de ce site web est d'illustrer l'arbre de la Vie depuis son apparition sur notre planète. Un arbre en forme de spirale représente la phylogénie de toutes les espèces. On y voit alors les relations entre espèces et on prend conscience de la grande diversité biologique par la taille et le nombre de ramifications de cette arbre. On peut se déplacer dans cette spirale en zoomant et cliquant sur les espèces qui nous intéresse pour avoir plus d'informations sur ces dernières.
 
 	\subsection{Lifemap}
-	(\href{http://lifemap.univ-lyon1.fr/}{\emph{visiter le site}})
-	\paragraph{}
-		
 
 	\subsection{Algorithme de colonisation de l'espace}
-	\paragraph{}
-
-
 
 \section{Déroulement du projet}
 	
