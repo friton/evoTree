@@ -86,12 +86,19 @@
 				
 
 	\subsection{Outils utilisés pour répondre aux besoins}
-		\paragraph{}
-		Ce site sera réalisé à l'aide d'outils de développement web, à savoir les langages HTML5 / CSS3, ainsi que Javascript. Ces trois langages permettront de mettre en place la structure visuelle du site.
-		En parrallèle nous utiliserons le framework graphique D3.js qui nous permettra d'afficher l'arbre, la chronologie, ainsi que les diverses informations. Ce framework est constitué de multiples packages différents qui donnent lieu à des représentation graphiques très riches. Nous allons également utiliser un framework, dénommé W3.CSS, qui nous permettra de rendre notre site internet responsive. Il sera donc consultable sur la pluspart des appareils disponible.
+		\paragraph{HTML5/CSS3}
+		La page web sera créé en HTML/CSS, qui assurera l'affichage des éléments de base.
+		Nous utiliserons W3.CSS pour la décoration par simplicité et expérience. Il nous permettra de rendre notre page web responsive. Il sera donc consultable sur la pluspart des appareils disponible.
 
-		\paragraph{}
-		Pour générer notre arbre nous avons recours à un script Python en version 2.7. Nous utilisons cette version pour pouvoir obtenir des représentation graphique dans une fenêtre à l'aide de la bibliothèques Matplotlib. Cette bibliothèque n'étant pas encore bien fonctionnelle sur la version 3 de Python, nous sommes donc rester sur la version 2.7.
+		\paragraph{JavaScript}
+		La partie interaction et animations de base sera réalisé par des script JS. Quant à l'affichage des données plus sophistiquées, nous aurons recours à D3.js.
+
+		\paragraph{\href{https://d3js.org/}{D3.js}}
+		D3.js est un framework graphique créé à base de JavaScript, spécialisé dans l'affichage de données. Il nous permettra d'afficher l'arbre, la chronologie, ainsi que les diverses informations de manière interactive. 
+		Ce framework inclu de multiples packages qui donnent lieu à des représentation graphiques très riches. 
+
+		\paragraph{Python 2.7}
+		Pour générer notre arbre nous avons recours à un algorithme de colonisation de l'espace. Cet algorithme est écrit en Python 2.7, car le module Matplotlib permettant l'affichage de l'arbre n'étant pas encore bien fonctionnelle sur la version 3 de Python. Il sera long de reprogrammer à partir du début, nous sommes donc rester sur ce script avec Python 2.7. 
 	
 	\subsection{Ordre de priorité}
 		\paragraph{}
@@ -99,7 +106,7 @@
 
 		\paragraph{}
 		En première approche nous devrons élaborer un script pour générer un arbre qui soit le plus représentatif de l'histoire évolutive de la vie sur Terre. Cet arbre devra bien montrer l'existence des grandes extinctions. 
-		En second lieu il faudra créer la monture de notre site, avec les différentes parties, notamment celle qui devra accueillir l'arbre. 
+		En second lieu il faudra créer la monture de notre site, avec les différentes parties, notamment celle qui devra accueillir l'arbre.
 		Une fois la structure du site terminé, nous devrons intégrer notre arbre avec des scripts javascript, notamment avec D3.js, pour obtenir les ramifications qui représenteront la biodiversité à un temps T. Cet arbre sera accompagné d'une échelle des temps géologiques, qui nous servira à nous situer dans l'histoire évolutive.
 
 		\paragraph{}
@@ -198,12 +205,18 @@ Il existe sur internet des réalisations dont notre projet est inspiré. Nous av
 		Le projet doit être développé dans une période de 1 mois.
 
 	\subsection{Contraintes techniques}
+		La principale conrtainte technique résidera dans l'appréhension et la compréhension de l'algorithme de colonisation de l'espace. Il faudra pouvoir l'adapter à nos besoins, c'est-à-dire qu'il puisse s'ancrer correctement au sein de notre site. Nous devons également orienté le sens de son expansion, de la gauche vers la droite, pour qu'il puisse correspondre aux besoins attendus pour ce projet. Enfin, il devra bien marquer les grandes extinctions qui se sont déroulés lors des temps géologiques.
 
+		D'autres contraintes peuvent apparaître, notamment lorsque nous devrons intégrer notre arbre sur notre site internet, il faudra alors bien trouver une concordance entre les différents codes que nous allons utiliser. De plus, nous devrons faire l'apprentissage de la riche bibliothèque Javascript qu'est D3.js.
 		
 
 	\subsection{Autres contraintes}
 
 \section{Ouverture}
+
+	Après avoir finalisé notre projet, nous pouvons nous projetter un petit plus loin de ce qui aura été fait. Ce travail fourni pourra servir de base à d'autres développeurs, ou encore pourra être mis en ligne pour en donner l'accès au public. Nous pouvons également penser à l'intégrer au sein de musée, afin d'apporter une touche ludique à l'Histoire de l'origine de la vie.
+	De nombreuses otpions pourons être implémenter, cela peut aller à la description très précises d'espèces, et non pas s'arrèter au taxon. On peux aussi penser à rajouter des options supplémentaires, comme par exemple les fossiles connus, pour montrer jusqu'où nous sommes capable de remonter.
+
 
 \section{Références}\label{Ref}
 \begin{enumerate}
