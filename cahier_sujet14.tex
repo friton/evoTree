@@ -133,8 +133,8 @@
 		Deux possibilité s’offre à nous :  recoder l’algorithme en partant du départ ou utiliser un script déjà écrit par Wandrille Duchemin en le modifiant pour les besoins du projet, cet algorithme prend déjà en compte la possibilité d’ajouter des extinctions d’espèces à des moments indiqués dans le script :
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[width=12cm]{./img/multipleExtinction.png}
-			\caption{Exemple d'arbre obtenu avec l'agorithme fourni}
+			\includegraphics[width=8cm]{./img/multipleExtinction.png}
+			\caption{Exemple d'arbre obtenu avec l'agorithme fourni.}
 		\end{figure}
 	
 		Le fonctionnement de l’algorithme de base est décrit dans le papier \emph{Modeling Trees with a Space Colonization Algorithm}\footnote{\url{http://algorithmicbotany.org/papers/colonization.egwnp2007.pdf}}, {Runions \emph{et al}, 2007.
@@ -142,12 +142,13 @@
 		L’algorithme se déroule en différentes  phases :
 		\begin{enumerate}
 			\item Création d’une zone que l’on remplis avec des points d’attractions de manière aléatoire (par exemple un rectangle de 200 de largeur sur 1000 de longueur). 
+			\newpage
 			\item Positionnement de notre point arbre (branche) de départ (pour nous en x=0 et y =0).
-			A ce moment on a quelque chose qui ressemble à cela :
+			A ce moment on a quelque chose qui ressemble à la Figure 3.
 			\begin{figure}[!h]
 				\centering
 				\includegraphics[width=11cm]{./img/sc.jpg}
-				\caption{rien pour l'instant}
+				\caption{Représentation des points d'attraction (vert) sur la zone de croissance.}
 			\end{figure}
 			\item Ensuite pour chaque point d’attraction on récupère la branche la plus proche présente dans son rayon d’attraction. Si cette branche est dans un « rayon minimum » par rapport au point d’attraction ce dernier devient inactif.
 
@@ -155,7 +156,7 @@
 			\begin{figure}[!h]
 				\centering
 				\includegraphics[width=7cm]{./img/sc2.jpg}
-				\caption{rien pour l'instant}
+				\caption{Exemple de croissance sur un pas de temps.}
 			\end{figure}
 			\item On fait cela en boucle jusqu’à ce qu’il n’y es plus de possibilité de croître ou que la boucle atteigne son maximum.
 		\end{enumerate}
