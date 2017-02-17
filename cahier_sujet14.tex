@@ -1,7 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage[francais]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[toc,page]{appendix} 
+\usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
@@ -53,10 +52,10 @@
 
 \section{Contexte biologique}
 	\paragraph{}
-	La vie sur Terre est apparu il y a quelques milliards d'années. Il a fallut de nombreuses étapes pour que cette grande histoire parvienne jusqu'à l'Homme et ses espèces contemporaines. Cette histoire est parsemée de nombreuses péripéties qui ont résulté par l'apparition et la disparition de très nombreuses espèces. Ces variations sont dues à de nombreuses extinctions qui ont eu lieu au cours des temps géologiques. En revanche ces bouleversements dans l'histoire de la Vie restent à l'heure actuelle très floues quant à leur intensité et leur origine.
+	La vie sur Terre est apparu il y a quelques milliards d'années. Il a fallut de nombreuses étapes pour que cette grande histoire parvienne jusqu'à l'Homme et ses espèces contemporaines. Cette histoire est parsemée de nombreuses péripéties qui ont résulté par l'apparition et la disparition de très nombreuses espèces. Les plus grandes variations sont dues à de nombreuses extinctions qui ont eu lieu au cours des temps géologiques. En revanche ces bouleversements dans l'histoire de la Vie restent à l'heure actuelle très floues quant à leur intensité et leur origine.
 
 	\paragraph{}
-	De nos jours, le grand public adopte une vision biaisée de l'évolution, tel qu'il existe qu'une seule extinction qui a été celle des dinosaures. Alors que d'après les connaissances actuelles, on peut recenser jusqu'à sept extinctions massives dont celle des dinosaures est la plus récente.
+	De nos jours, le grand public adopte une vision biaisée de l'évolution, tel qu'il existe qu'une seule extinction qui a été celle des dinosaures. Alors que d'après les connaissances actuelles, on peut recenser jusqu'à sept extinctions massives. 
 	% à verifier le nombre
 
 	\begin{figure}[!h]
@@ -67,17 +66,17 @@
 	\end{figure}
 
 	\paragraph{}
-	Les trois chercheurs de l'Équipe Bioinformatique, Phylogénie et Génomique Évolutive à LBBE (UCBL Lyon 1), D. M. de Vienne, J.-P. Flandrois et L. Guéguen se sont interessés à la sensibilisation de cette vision plus cohérente chez le grand public.
+	Les trois chercheurs de l'Équipe Bioinformatique, Phylogénie et Génomique Évolutive au LBBE (UCBL Lyon 1), D. M. de Vienne, J.-P. Flandrois et L. Guéguen souheteraient sensibiliser le grand public à cette vision plus cohérente de l'évolution. 
 
 \section{Analyse des besoins}
 
 	L'idée serait de retracer ces événements à l'aide d'un site web interactif, qui pourra par la suite être utilisé dans un but pédagogique (Université, Musée,\ldots).
 
 	\subsection{Caractéristiques de la plateforme à mettre en place}
-		Le produit attendu sera un site web intéractif et responsive, c'est-à-dire accessible depuis différents appareils (Ordinateur, Tablette, Smartphone, \ldots).
+		Le produit attendu sera un site web intéractif et responsive, c'est-à-dire optimisé pour différents appareils (Ordinateur, Tablette, Smartphone, \ldots).
 		
 
-		Il sera chargé de présenter la \emph{timeline} de la vie, depuis l'apparition de la vie jusqu'à ce jour. Les événements de la vie seront présentés sous forme d'un arbre orienté horizontalement, et explorable depuis une barre de navigation.	De plus, cet outil permettra de mettre en lumière les différentes grandes crises qui ont eu un impact sur la densité des espèces au cours du temps. L'afficha mettra également l'accent sur les événements remarquables (tels que l'extinction des dinosaures). 
+		Il sera chargé de présenter la \emph{timeline} de la vie, depuis son apparition jusqu'à ce jour. Les événements de la vie seront présentés sous forme d'un arbre orienté horizontalement, et explorable depuis une barre de navigation.	De plus, cet outil permettra de mettre en lumière les différentes grandes crises qui ont eu un impact sur la densité des espèces au cours du temps. L'afficha mettra également l'accent sur les événements remarquables (tels que l'extinction des dinosaures). 
 
 		\begin{figure}[!h]
 			\centering
@@ -93,17 +92,17 @@
 	\subsection{Outils utilisés pour répondre aux besoins}
 		\paragraph{HTML5/CSS3}
 		La page web sera créé en HTML/CSS, qui assurera l'affichage des éléments de base.
-		Nous utiliserons W3.CSS pour la décoration par simplicité et expérience. Il nous permettra de rendre notre page web responsive. Il sera donc consultable sur la pluspart des appareils disponible.
+		Nous utiliserons W3.CSS pour la décoration par simplicité et expérience. Il nous permettra de rendre notre page web responsive. Il sera donc consultable sur la pluspart des appareils disponibles.
 
 		\paragraph{JavaScript}
 		La partie interaction et animations de base sera réalisé par des script JS. Quant à l'affichage des données plus sophistiquées, nous aurons recours à D3.js.
 
 		\paragraph{D3.js}
 		Il s'agit d'un framework graphique créé à base de JavaScript, spécialisé dans l'affichage de données\footnote{\url{https://d3js.org/}}. Il nous permettra d'afficher l'arbre, la chronologie, ainsi que les diverses informations de manière interactive. 
-		Ce framework inclu de multiples packages qui donnent lieu à des représentation graphiques très riches. 
+		Ce framework inclu de multiples packages qui donnent lieu à des représentations graphiques très riches. 
 
 		\paragraph{Python 2.7}
-		Pour générer notre arbre nous avons recours à un algorithme de colonisation de l'espace. Cet algorithme est écrit en Python 2.7, car le module Matplotlib permettant l'affichage de l'arbre n'étant pas encore bien fonctionnelle sur la version 3 de Python. Il sera long de reprogrammer à partir du début, nous sommes donc rester sur ce script avec Python 2.7. 
+		Pour générer notre arbre nous avons recours à un algorithme de colonisation de l'espace. Cet algorithme est écrit en Python 2.7, car le module Matplotlib permettant l'affichage de l'arbre n'étant pas encore bien fonctionnel sur la version 3 de Python. Nous sommes donc rester sur un script en Python version 2.7. 
 	
 	\subsection{Ordre de priorité}
 		
@@ -111,31 +110,37 @@
 
 		
 		En première approche nous devrons élaborer un script pour générer un arbre qui soit le plus représentatif de l'histoire évolutive de la vie sur Terre. Cet arbre devra bien montrer l'existence des grandes extinctions. 
+		
 		En second lieu il faudra créer la monture de notre site, avec les différentes parties, notamment celle qui devra accueillir l'arbre.
-		Une fois la structure du site terminé, nous devrons intégrer notre arbre avec des scripts javascript, notamment avec D3.js, pour obtenir les ramifications qui représenteront la biodiversité à un temps T. Cet arbre sera accompagné d'une échelle des temps géologiques, qui nous servira à nous situer dans l'histoire évolutive.
+		Une fois la structure du site terminé, nous devrons intégrer notre arbre avec des scripts javascript, notamment avec D3.js, pour obtenir les ramifications qui représenteront la biodiversité à un temps $\tau$. Cet arbre sera accompagné d'une échelle des temps géologiques, qui nous servira à nous situer dans l'histoire évolutive.
 
 		
 		Enfin, s'il nous reste du temps, nous pourrons peaufiner notre site en y ajoutant des options complémentaires, comme par exemple le taux d'oxygène présent lors d'une période particulière, ou encore les épisodes d'ères glaciaires. Ces informations complémentaires peuvent apporter une meilleure compréhension des évenements qui ont fait varier la densité de la biodiversité au cours du temps.
 
 \section{Analyse de l'existant}
-	Il existe sur internet des réalisations dont notre projet est inspiré. Nous avons également à disposition le script de W.DUCHEMIN adapté à partir de l'algorithme de colonisation de l'espace. Ce script permet de dessiner de manière réaliste des arbres en deux ou trois dimensions.
+	Il existe sur internet des réalisations dont notre projet est inspiré. Nous avons également à disposition le script de W. DUCHEMIN\footnote{\url{wandrille.duchemin@univ-lyon1.fr}, UMR CNRS 5558, LBBE.} adapté à partir de l'algorithme de colonisation de l'espace. Ce script permet de dessiner de manière réaliste des arbres en deux ou trois dimensions.
 
-	\subsection{If the moon were only one pixel}
-		L’idée de ce projet est de faire prendre conscience au grand public de l'immensité du vide qui nous entoure. Ainsi l'utilisateur se déplace dans le système solaire en scrollant horizontalement\footnote{\url{http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html}}. C'est en quelque sorte une carte du système solaire à l'échelle : diamètre de la lune = 1 pixel. Une échelle graduée nous accompagne lors de ce voyage dans l'espace afin d'accentuer la grandeur de ses distances. L'utilisateur s’aperçoit alors très vite que la majorité du système solaire est constitué de vide. Pour rendre l'expérience plus ludique, les développeurs ont eu la bonne idée de combler le vide par des petits messages informatifs, parfois à ton humoristique. Il nous est aussi possible de voyager à la vitesse de la lumière, on se rend alors compte que même à cette vitesse le voyage est très long.         
+	\subsection{Pages Web existantes}
+		Notre projet s'articulera sur un mélange de plusieurs concepts issus des sites suivants. Le but étant de représenter l'arbre de la vie tel que dans \emph{Onezoom} mais de manière horizontal comme \emph{If the moon were only one pixel} le présente.
+
+		\subsubsection{If the moon were only one pixel}
+			L’idée de ce projet est de faire prendre conscience au grand public de l'immensité du vide qui nous entoure. Ainsi l'utilisateur se déplace dans le système solaire en scrollant horizontalement\footnote{\url{http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html}}. C'est en quelque sorte une carte du système solaire avec pour unité de base le diamètre de la lune représenté par un pixel. Une échelle graduée nous accompagne lors de ce voyage dans l'espace afin d'accentuer la grandeur de ses distances. L'utilisateur s’aperçoit alors très vite que la majorité du système solaire est constitué de vide. Pour rendre l'expérience plus ludique, les développeurs ont eu la bonne idée de combler le vide par des petits messages informatifs, parfois à ton humoristique. Il nous est aussi possible de voyager à la vitesse de la lumière, on se rend alors compte que même à cette vitesse le voyage est très long.         
  		
-	\subsection{TimeTree}
-		Ce projet a pour objectif de représenter l'histoire de la Terre. Les 4,5 milliards d'années de son existence sont symbolisées par le tour d'une horloge\footnote{\url{http://deeptime.info/}}. On peut alors situer dessus les grandes ères géologiques, d'important événements géologiques (formation de la lune par exemple) ainsi que les groupes biologiques qui ont été importants dans l'évolution de la Vie. Le site est interactif, en cliquant sur le nom d'une ère par exemple, on est alors redirigé vers une information reliée.      
+		\subsubsection{TimeTree}
+			Ce projet a pour objectif de représenter l'histoire de la Terre. Les 4,5 milliards d'années de son existence sont symbolisées par le tour d'une horloge\footnote{\url{http://deeptime.info/}}. On peut alors situer dessus les grandes ères géologiques, d'important événements (formation de la lune par exemple) ainsi que les groupes biologiques majeurs dans l'évolution de la Vie. de plus, il s'agit d'un site intéractif qui nous donne de nombreuses informations complémentaires.
 	
-	\subsection{Onezoom}
-		Ici le but de ce site web est d'illustrer l'arbre de la Vie depuis son apparition sur notre planète. Un arbre en forme de spirale représente la phylogénie de toutes les espèces\footnote{\url{http://www.onezoom.org/}}. On y voit alors les relations entre espèces et on prend conscience de la diversité biologique par la taille et le nombre de ramification de cette arbre. On peut se déplacer dans cette spirale en zoomant et cliquant sur les espèces qui nous intéresse pour avoir plus d'informations sur ces dernières.    	
-
-	\subsection{Lifemap}
-		Blablabla\footnote{\url{http://lifemap.univ-lyon1.fr/}}
+		\subsubsection{Onezoom}
+			Ici le but de ce site web est d'illustrer la classification des espèces (archée et eucaryote). Un arbre en forme de spirale représente la phylogénie de toutes les espèces\footnote{\url{http://www.onezoom.org/}}. On observe les relations entre espèces, et cela nous permet de prendre conscience de la diversité biologique grâce à la taille et au nombre de ramifications de l'arbre.
+			La navigation au sein de cette spiral est rendue possible à l'aide de fonctions de zoom. De plus, nous pouvons obtenir des informations sur une espèce d'intérêt.
+			    	
+		\subsubsection{Lifemap}
+			Ce site propose trois représentations différentes de l'arbre de la vie\footnote{\url{http://lifemap.univ-lyon1.fr/}}, selon la source des données: \emph{Open Tree of Life}, \emph{NCBI Taxonomy} simplifié et \emph{NCBI taxonomy} complète. Il nous est possible de zoomer au sein de cette taxonomie jusqu'à atteindre une espèce particulière.
 
 	\subsection{Algorithme de colonisation de l'espace}
-		Cet algorithme est un algorithme utilisé dans les jeux vidéos pour fabriquer un arbre réaliste de manière aléatoire. Dans notre cas, il nous est demandé de le modifier et de l’adapter à la création d’un arbre de la Vie démarrant  de l’origine de la vie et allant jusqu’à notre époque.
+		Cet algorithme est utilisé dans les jeux vidéos pour fabriquer un arbre réaliste de manière aléatoire. Dans notre cas, il nous est demandé de le modifier et de l’adapter à la création d’un arbre de la Vie. Cet arbre devra démarrer à l’origine de la vie jusqu’à notre époque.
 	
-		Deux possibilité s’offre à nous :  recoder l’algorithme en partant du départ ou utiliser un script déjà écrit par Wandrille Duchemin en le modifiant pour les besoins du projet, cet algorithme prend déjà en compte la possibilité d’ajouter des extinctions d’espèces à des moments indiqués dans le script :
+		Deux possibilités s’offrent à nous, soit réimplémenter l’algorithme en partant du départ, soit utiliser un script déjà écrit par W. DUCHEMIN. Pour ce dernier, il faudra le modifier pour les besoins du projet. De plus, ce script prend déjà en compte la possibilité d’ajouter des extinctions d’espèces. Le script fournit l'image suivante:
+
 		\begin{figure}[!h]
 			\centering
 			\includegraphics[width=8cm]{./img/multipleExtinction.png}
@@ -144,25 +149,25 @@
 	
 		Le fonctionnement de l’algorithme de base est décrit dans le papier \emph{Modeling Trees with a Space Colonization Algorithm}\footnote{\url{http://algorithmicbotany.org/papers/colonization.egwnp2007.pdf}}, {Runions \emph{et al}, 2007.
 	
-		L’algorithme se déroule en différentes  phases :
+		L’algorithme se déroule en différentes phases:
 		\begin{enumerate}
-			\item Création d’une zone que l’on remplis avec des points d’attractions de manière aléatoire (par exemple un rectangle de 200 de largeur sur 1000 de longueur). 
-			\item Positionnement de notre point arbre (branche) de départ (pour nous en x=0 et y =0).
-			A ce moment on a quelque chose qui ressemble à la Figure 4.
+			\item Création d’une zone que l’on remplit avec des points d’attractions de manière aléatoire (par exemple un rectangle de 200 de hauteur sur 1000 de longueur). 
+			\item Positionnement de notre point d'initialisation de départ (pour nous en x = 0 et y = 0), voir la Figure 4.
+
 			\begin{figure}[!h]
 				\centering
 				\includegraphics[width=11cm]{./img/sc.jpg}
-				\caption{Représentation des points d'attraction (vert) sur la zone de croissance.}
+				\caption{Représentation des points d'attractions (vert) sur la zone de croissance.}
 			\end{figure}
-			\item Ensuite pour chaque point d’attraction on récupère la branche la plus proche présente dans son rayon d’attraction. Si cette branche est dans un « rayon minimum » par rapport au point d’attraction ce dernier devient inactif.
+			\item Pour chaque point d’attraction, on récupère la branche la plus proche présente dans son rayon d’attraction. Si cette branche est dans un « rayon minimum » par rapport au point d’attraction, ce dernier devient inactif.
 
-			\item On calcul alors un vecteur pour chaque branche en prenant en compte tout les points d’attractions de la manière suivante (chaque vecteur dépend des points d’attraction et du vecteur d’avant) et ont crée le nœud fils qui suit le vecteur : 
+			\item On calcul un vecteur, pour chaque branche, en prenant en compte tout les points d’attractions. Chaque vecteur dépend des points d’attractions ainsi que du vecteur parent. Par la suite, on crée un nœud fils, qui va dépendre du vecteur précédent (voir Figure 5).
 			\begin{figure}[!h]
 				\centering
 				\includegraphics[width=7cm]{./img/sc2.jpg}
 				\caption{Exemple de croissance sur un pas de temps.}
 			\end{figure}
-			\item On fait cela en boucle jusqu’à ce qu’il n’y es plus de possibilité de croître ou que la boucle atteigne son maximum.
+			\item On réitère cet algorithme jusqu’à ce qu’il n’y ait plus de possibilité de croître, ou que la boucle atteigne son maximum.
 		\end{enumerate}
 
 
@@ -173,41 +178,45 @@
 		En premier abord, nous devons adapter l'algorithme de la colonisation de l'espace pour pouvoir répondre à notre problématique. Pour cela, il devra répondre aux critères suivants:
 		\begin{enumerate}
 			\item Il doit pourvoir se développer de la gauche vers la droite, et montrer les différentes extinctions qui se sont déroulés.
-			\item L'arbre doit être le plus représentatif de ce qui s'est vraiment déroulé. On doit ainsi supprimer les petites branches qui peuvent apparaître suite à l'expansion des ramifications.
+			\item L'arbre doit être le plus représentatif de ce qui s'est vraiment passé. On doit ainsi supprimer les petites branches qui peuvent apparaître suite à l'expansion des ramifications.
 			\item L'arbre ne devra pas contenir de branches s'orientant de la droite vers la gauche.
 		\end{enumerate}
 	 
 	\subsection{Trouver les dates des évènements}
-		En parallèle de la construction de l'arbre, nous allons récollté les dates des événements publiées dans la littérature. Etant donné que la précision de ces dates est floue à l'heure actuelle, nous proposons de considérer l'étendue de ces valeurs au sein d'un intervalle. Il sera discuté auprès de paléontologues, connus du laboratoire.
+		En parallèle de la construction de l'arbre, nous allons récolter les dates des événements publiés dans la littérature. Etant donné que la précision de ces dates est floue à l'heure actuelle, nous proposons de considérer l'étendue de ces valeurs au sein d'un intervalle. Il sera discuté auprès de paléontologues, connus du laboratoire.
 
 	\subsection{Construire la structure du site internet}
-		Ensuite, nous devrons mettre en place la structure du site internet pour qu'il puisse intégrer l'arbre que nou aurons généré. Ce site internet sera composé de quatre partie distinctes. la première comportera un menu, qui permettra notamment la navigation à travers les âges géologiques. Comme par exemple attindre une certaine extinction. la deuxième partie sera une partie qui comprendra des informations supplémentaires, comme par exemple le taux d'oxygène présent, ou encore si nous somme en présence d'une ère glaciaire ou non.
-		La partie suivante représentera la partie principale du site, ce sera celle qui va contenir l'arbre de la vie. Cette partie devra utiliser des packages D3.js pour dessiner l'ensemble des ramifications de l'arbre que nous avons généré.
-		Enfin, le bas de la page sera composé se l'échelle des teps géologiques, afin de se donner une représentation de la grandeur de ces ères.
+		Ensuite, nous devrons mettre en place la structure du site internet pour qu'il puisse intégrer l'arbre que nous aurons généré. Ce site internet sera composé de quatre partie distinctes. 
+
+		La première comportera un menu, qui permettra notamment la navigation à travers les âges géologiques. Comme par exemple atteindre une certaine extinction. 
+
+		La deuxième partie comprendra des informations supplémentaires, comme par exemple le taux d'oxygène présent, ou encore si nous somme en présence d'une ère glaciaire.
+		
+		La partie suivante représentera la partie principale du site, ce sera celle qui va contenir l'arbre de la Vie. Cette partie devra utiliser des packages D3.js pour dessiner l'ensemble des ramifications de l'arbre que nous avons généré.
+		
+		Enfin, le bas de la page sera composé de l'échelle des temps géologiques, afin de se donner une représentation de la grandeur de ces ères.
 
 	\subsection{Afficher les données sur la page}
-		Une fois le site construit, et l'arbre généré, nous devrons apr la suite réussir à intégrer cette structure à notre site internet. Pour cela nou utiliserons le framwork D3.js, qui nous permettra de réaliser des représentations graphiques depuis un fichier de points. Ce fichier indiquera les coordonnées de ces points à dessiner, ce que le script de D3.js se chargera d'afficher.
+		Une fois le site construit, et l'arbre généré, nous devrons par la suite réussir à intégrer cette structure à notre site internet. Pour cela nou utiliserons le framwork D3.js, qui nous permettra de réaliser des représentations graphiques depuis un fichier de points. Ce fichier indiquera les coordonnées de ces points à dessiner, ce que le script de D3.js se chargera d'afficher.
 		
 
 \section{Contraintes}
 
-	\subsection{Contrainte temporelle}
-		La date de rendu du cahier de charge est prévue le vendredi 17 février.
-		La soutenance est prévue provisoirement le vendredi 24 mars, dont le délivrable devrait être rendu 2 jours avant.
-		Le projet doit être développé dans une période de 1 mois.
+	\subsection{Contraintes temporelles}
+		La date de rendu du cahier des charges est prévue le vendredi 17 février.
+		La soutenance est prévue provisoirement le vendredi 24 mars, dont le délivrable devrait être rendu deux jours avant.
+		Le projet doit être développé dans une période d'environ un mois.
 
 	\subsection{Contraintes techniques}
-		La principale contrainte technique résidera dans l'appréhension et la compréhension de l'algorithme de colonisation de l'espace. Il faudra pouvoir l'adapter à nos besoins, c'est-à-dire qu'il puisse s'ancrer correctement au sein de notre site. Nous devons également orienté le sens de son expansion, de la gauche vers la droite, pour qu'il puisse correspondre aux besoins attendus pour ce projet. Enfin, il devra bien marquer les grandes extinctions qui se sont déroulés lors des temps géologiques.
+		La principale contrainte technique résidera dans l'appréhension et la compréhension de l'algorithme de colonisation de l'espace. Il faudra pouvoir l'adapter à nos besoins, c'est-à-dire qu'il puisse s'ancrer correctement au sein de notre site. Nous devons également orienter le sens de son expansion, de la gauche vers la droite. Enfin, il devra bien marquer les grandes extinctions qui se sont déroulés lors des temps géologiques.
 
 		D'autres contraintes peuvent apparaître, notamment lorsque nous devrons intégrer notre arbre sur notre site internet, il faudra alors bien trouver une concordance entre les différents codes que nous allons utiliser. De plus, nous devrons faire l'apprentissage de la riche bibliothèque Javascript qu'est D3.js.
 		
 
-	\subsection{Autres contraintes}
-
 \section{Ouverture}
 
-	Après avoir finalisé notre projet, nous pouvons nous projetter un petit plus loin de ce qui aura été fait. Ce travail fourni pourra servir de base à d'autres développeurs, ou encore pourra être mis en ligne pour en donner l'accès au public. Nous pouvons également penser à l'intégrer au sein de musée, afin d'apporter une touche ludique à l'Histoire de l'origine de la vie.
-	De nombreuses otpions pourons être implémenter, cela peut aller à la description très précises d'espèces, et non pas s'arrèter au taxon. On peux aussi penser à rajouter des options supplémentaires, comme par exemple les fossiles connus, pour montrer jusqu'où nous sommes capable de remonter.
+	Après avoir finalisé notre projet, nous pouvons nous projetter un petit plus loin de ce qui aura été fait. Ce travail fourni pourra servir de base à d'autres développeurs, ou encore pourra être mis en ligne pour en donner l'accès au public. Nous pouvons également penser à l'intégrer au sein de musées, afin d'apporter une touche ludique à l'Histoire de l'origine de la Vie.
+	De nombreuses options pourons être implémenter, cela peut aller à la description très précises d'espèces, et non pas s'arrêter aux taxons. On peux aussi penser à rajouter des options supplémentaires, comme par exemple les fossiles connus, pour montrer jusqu'où nous sommes capable de remonter.
 
 
 \section{Références}\label{Ref}
@@ -216,11 +225,5 @@
 		Department of Computer Science, University of Calgary, Canada, 2007, D. Ebert, S. Mérillou (Editors).
 		Eurographics Workshop on Natural Phenomena. \textbf{Modeling Trees with a Space Colonization Algorithm}
 	\end{enumerate}
-
-\newpage
-
-\begin{appendices} 
-	
-\end{appendices} 
 
 \end{document}
