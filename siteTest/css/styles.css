@@ -1,0 +1,59 @@
+
+
+html,body {
+	height: 100%;
+	background-color: #000000;
+	margin: 0px;
+	padding: 0px;
+	overflow-y: hidden;
+} 
+
+.divMenu {
+	height: 5%;
+}
+
+.logo {
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: 0.5%
+	
+}
+
+.iconBar {
+	position:fixed;
+	width:500px;
+
+	left: 55%;
+	margin-left:-250px;
+	
+}
+
+.iconBar li {
+	display: inline;
+	margin: 10px;
+	margin-bottom: 10px;
+	list-style-type: none;
+}
+
+.images {
+	height:10px;
+	width:10px;
+	opacity: 0.7;
+	color: white;
+	}
+
+.images:hover {
+	opacity: 1.0;
+}
+
+.divOptions {
+	height: 12.5%;
+}
+
+.divArbre {
+	height: 70%;
+}
+
+.divChronologie {
+	height: 12.5%;
+}
