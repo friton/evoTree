@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-var obj = JSON.parse('JSON.json');
-var json_obj;
-$.getJSON("JSON.json",function (data) {
-	json_obj = data;
-});
-alert(json_obj.Point_0.fils);
-</script>
-</head>
-<body>
+	<head>
+		<title>JSON test</title>
+	</head>
 
-<div></div>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<script>
+	/* $.getJSON('JSON.json', function(data){
+		console.log('ca marche!');
+	}) */
+	/* Deux méthodes, soit avec getJSON (moins efficace ou alors avec ajax, juste en dessous) */
+
+	$.ajax({
+		url: 'JSON.json',
+		dataType: 'json',
+		type: 'get',
+		cache: false,
+		success: function(data){
+			$(data.Point_29711).each(function(index, value){
+				console.log(value.x);
+				/* tu peux changer le value.x, par value.y ou value.fils, et ca t'ecris dans la console de ton site la valeur de x (ou ce que tu lui a demandé)
+				va falloir ensuite boucler sur les points pour récupérer et dessiner un point pour chaque valeur de x et y , et ensuite tracer une ligne en fonctions des fils */
+			})
+		}
+	})
+	</script>
 
 </body>
 </html>
