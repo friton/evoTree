@@ -5,28 +5,57 @@
 	</head>
 
 <body>
+	<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+	your browser does not support the HTML5 canvas tag.</canvas>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
 	<script>
-	/* $.getJSON('JSON.json', function(data){
-		console.log('ca marche!');
-	}) */
-	/* Deux méthodes, soit avec getJSON (moins efficace ou alors avec ajax, juste en dessous) */
+	/*var point1_x = 0
+	var point1_y = 0
+	alert(point1_x)
 
 	$.ajax({
-		url: 'JSON.json',
+		url: 'test.json',
 		dataType: 'json',
 		type: 'get',
 		cache: false,
 		success: function(data){
-			$(data.Point_29711).each(function(index, value){
-				console.log(value.x);
-				/* tu peux changer le value.x, par value.y ou value.fils, et ca t'ecris dans la console de ton site la valeur de x (ou ce que tu lui a demandé)
-				va falloir ensuite boucler sur les points pour récupérer et dessiner un point pour chaque valeur de x et y , et ensuite tracer une ligne en fonctions des fils */
+			$(data.Point_1).each(function(index, value){
+				
+				point1_x = value.x
+				alert(point1_x)
+				var point1_y = value.y
 			})
 		}
 	})
-	</script>
+	alert(point1_x)
+	console.log(point1_x)
+	var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.moveTo(0,250);
+	ctx.lineTo(point1_x,point1_y);
+	ctx.moveTo(point1_x,point1_y);
+	ctx.lineTo(point2_x,point2_y);
+	ctx.moveTo(point2_x,point2_y);
+	ctx.lineTo(point3_x,point3_y);
+
+	ctx.stroke(); */
+
+	var monJson = {};
+    $.ajax({
+        url: "test.json",
+        async: false,
+        dataType: 'json',
+        success: function(data) {
+            monJson = data;
+        }
+    });
+    console.log(monJson)
+
+
+
+</script>
 
 </body>
 </html>
