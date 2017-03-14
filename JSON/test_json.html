@@ -52,7 +52,21 @@
         }
     });
     console.log(monJson)
+    for(var i in monJson) {
+    	console.log(monJson[i]["x"]);
+    }
 
+    var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.moveTo(0,250);
+	ctx.lineTo(point1_x,point1_y);
+	ctx.moveTo(point1_x,point1_y);
+	ctx.lineTo(point2_x,point2_y);
+	ctx.moveTo(point2_x,point2_y);
+	ctx.lineTo(point3_x,point3_y);
+
+	ctx.stroke();
 
 
 </script>
