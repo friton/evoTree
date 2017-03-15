@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JSON test</title>
+		<style>
+.test {
+    background-color: yellow;
+}
+</style>
+	</head>
+
+<body >
+	<div onscroll="myFunction">
+	<canvas id="myCanvas" width="15000" height="600" style="border:1px solid #d3d3d3;" >
+	your browser does not support the HTML5 canvas tag.</canvas>
+	</div>
+	<p id="myP" style="position:fixed; left:600px" >6.00 Ma
+</p>
+			
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+<script>
+	
+
+	var monJson = {};
+    $.ajax({
+        url: "JSON-ok.json",
+        async: false,
+        dataType: 'json',
+        success: function(data) {
+            monJson = data;
+        }
+    });
+    
+    var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	var cty=c.getContext("2d");
+
+	
+	cty.lineWidth=0.05;
+	cty.beginPath();
+	
+	var x=0;
+	while(x<15000)
+	{
+		
+		if (x % 100 == 0)
+		{
+		cty.moveTo(x,600);
+		cty.lineTo(x,585);
+		cty.stroke();
+		}
+		else
+		{
+		cty.moveTo(x,600);
+		cty.lineTo(x,593);
+		cty.stroke();
+		}
+
+
+		
+		x=x+10;
+
+	}
+
+
+	ctx.lineWidth=2;
+	ctx.beginPath();
+	ctx.moveTo(0,300);
+	ctx.lineTo(1,300);
+    for(var i in monJson) {
+    	
+    	var x1=monJson[i]["x"]/2;
+    	var y1=monJson[i]["y"]/2+300;
+    
+    		ctx.moveTo(x1,y1);
+    		ctx.lineTo(x1+5,y1);
+    	
+    }
+
+    ctx.stroke();
+</script>
+
+<script>
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    
+
+    var canvas=document.getElementById("myCanvas");
+    var pos=GetPosCanvas(canvas)
+    document.getElementById("myP").innerHTML=pos.x.toFixed(2)+" Ma";
+}
+
+function GetPosCanvas(canvas) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: ((0-rect.left+600)*10000)/10**6
+          
+        };
+      }
+
+</script>
+
+
+</body>
+</html>
