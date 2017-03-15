@@ -5,7 +5,7 @@
 	</head>
 
 <body>
-	<canvas id="myCanvas" width="1500" height="600" style="border:1px solid #d3d3d3;">
+	<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
 	your browser does not support the HTML5 canvas tag.</canvas>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
@@ -44,31 +44,29 @@
 
 	var monJson = {};
     $.ajax({
-        url:  "JSON-ok-100000.json",
+        url: "test.json",
         async: false,
         dataType: 'json',
         success: function(data) {
             monJson = data;
         }
     });
-console.log(monJson)
+    console.log(monJson)
+    for(var i in monJson) {
+    	console.log(monJson[i]["x"]);
+    }
+
     var c=document.getElementById("myCanvas");
 	var ctx=c.getContext("2d");
-	ctx.lineWidth=4;
 	ctx.beginPath();
+	ctx.moveTo(0,250);
+	ctx.lineTo(point1_x,point1_y);
+	ctx.moveTo(point1_x,point1_y);
+	ctx.lineTo(point2_x,point2_y);
+	ctx.moveTo(point2_x,point2_y);
+	ctx.lineTo(point3_x,point3_y);
 
-	ctx.moveTo(0,300);
-	ctx.lineTo(1,300);
-    for(var i in monJson) {
-    	
-    	var x1=monJson[i]["x"];
-    	var y1=monJson[i]["y"]+300;
-    	
-    	ctx.moveTo(x1,y1);
-    	ctx.lineTo(x1+5,y1);	
-}
-
-ctx.stroke();
+	ctx.stroke();
 
 
 </script>
