@@ -14,21 +14,28 @@
 		margin: 0;
 		padding: 0;
 	}
+	html, body	{
+		height: 100%
+	}
 </style>
+
+<script>
+	haut=window.innerHeight
+</script>
 
 <body >
 	<div onscroll="myFunction">
-		<canvas id="myCanvas" width="15000" height="600" style="border:0px;" >
+		<canvas id="myCanvas" width="15000" height="500" style="border:0px;">
 		your browser does not support the HTML5 canvas tag.
 		</canvas>
 	</div>
-	<p id="myP" style="position:fixed; left:588px"><i class="material-icons">navigation</i> 0.00 Million d'ann&#233;es</p>
+	<p id="myP" style="position:fixed; left:588px; height: 10%;">
+		<i class="material-icons">navigation</i> 0.00 Million d'ann&#233;es
+	</p>
 			
 	
 	
 <script>
-	
-
 	var monJson = {};
 	$.ajax({
 		url: "JSON-ok.json",
@@ -42,48 +49,40 @@
 	var c=document.getElementById("myCanvas");
 	var ctx=c.getContext("2d");
 	var cty=c.getContext("2d");
-
-	
-	cty.lineWidth=0.05;
+	ctx.fillStyle="#808080";
+	ctx.fillRect(0,0,15000,500); 
 	cty.beginPath();
 	
 	var x=0;
-	while(x<15000)
-	{
-		
-		if (x % 100 == 0)
-		{
-		cty.moveTo(x+600,600);
-		cty.lineTo(x+600,585);
-		cty.stroke();
+	while(x<15000)	{
+		if (x % 100 == 0) {
+			cty.lineWidth=0.4;
+			cty.moveTo(x+600,500);
+			cty.lineTo(x+600,485);
+			cty.stroke();
 		}
-		else
-		{
-		cty.moveTo(x+600,600);
-		cty.lineTo(x+600,593);
-		cty.stroke();
+		else {
+			cty.lineWidth=0.1;
+			cty.moveTo(x+600,500);
+			cty.lineTo(x+600,493);
+			cty.stroke();
 		}
-
-
-		
 		x=x+10;
-
 	}
-	ctx.scale(1,2.1);
+
+	ctx.scale(1,1.7);
 
 	ctx.lineWidth=2;
 	ctx.beginPath();
 	ctx.moveTo(600,140);
 	ctx.lineTo(601,140);
 	for(var i in monJson) {
-		
 		var x1=monJson[i]["x"]/2+600;
 		var y1=monJson[i]["y"]/2+140;
-	
-			ctx.moveTo(x1,y1);
-			ctx.lineTo(x1+10,y1);
-		
+		ctx.moveTo(x1,y1);
+		ctx.lineTo(x1+10,y1);
 	}
+	ctx.strokeStyle="#0047b3";
 	ctx.stroke();
 </script>
 
@@ -92,8 +91,6 @@
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
-	
-
 	var canvas=document.getElementById("myCanvas");
 	var pos=GetPosCanvas(canvas)
 	document.getElementById("myP").innerHTML='<i class="material-icons">navigation</i> '+(pos.x-6).toFixed(2)+" Millions d'ann&#233;es";
@@ -102,8 +99,7 @@ function myFunction() {
 function GetPosCanvas(canvas) {
 		var rect = canvas.getBoundingClientRect();
 		return {
-		  x: ((0-rect.left+600)*10000)/10**6
-		  
+			x: ((0-rect.left+600)*10000)/10**6
 		};
 	  }
 
