@@ -3,21 +3,26 @@
 <head>
 	<title>JSON test</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <style>
-	.test {
+	.test 	{
 		background-color: yellow;
+	}
+	html, body, canvas, p 	{
+		margin: 0;
+		padding: 0;
 	}
 </style>
 
 <body >
 	<div onscroll="myFunction">
-		<canvas id="myCanvas" width="15000" height="600" style="border:1px solid #d3d3d3;" >
+		<canvas id="myCanvas" width="15000" height="600" style="border:0px;" >
 		your browser does not support the HTML5 canvas tag.
 		</canvas>
 	</div>
-	<p id="myP" style="position:fixed; left:600px" ></p>
+	<p id="myP" style="position:fixed; left:588px"><i class="material-icons">navigation</i> 0.00 Million d'ann&#233;es</p>
 			
 	
 	
@@ -48,14 +53,14 @@
 		
 		if (x % 100 == 0)
 		{
-		cty.moveTo(x,600);
-		cty.lineTo(x,585);
+		cty.moveTo(x+600,600);
+		cty.lineTo(x+600,585);
 		cty.stroke();
 		}
 		else
 		{
-		cty.moveTo(x,600);
-		cty.lineTo(x,593);
+		cty.moveTo(x+600,600);
+		cty.lineTo(x+600,593);
 		cty.stroke();
 		}
 
@@ -68,8 +73,8 @@
 
 	ctx.lineWidth=2;
 	ctx.beginPath();
-	ctx.moveTo(0,140);
-	ctx.lineTo(1,140);
+	ctx.moveTo(600,140);
+	ctx.lineTo(601,140);
 	for(var i in monJson) {
 		
 		var x1=monJson[i]["x"]/2+600;
@@ -91,7 +96,7 @@ function myFunction() {
 
 	var canvas=document.getElementById("myCanvas");
 	var pos=GetPosCanvas(canvas)
-	document.getElementById("myP").innerHTML=pos.x.toFixed(2)+" Ma";
+	document.getElementById("myP").innerHTML='<i class="material-icons">navigation</i> '+(pos.x-6).toFixed(2)+" Millions d'ann&#233;es";
 }
 
 function GetPosCanvas(canvas) {
