@@ -53,16 +53,15 @@ class space_colonization:
                 continue
             
             c = p.get_closest_point(ptocheck,max_x,min_x)
-            
-            if c is None:
+            if c[0] is None:
                 if p.status == False:##the point is no longer active
                     self.nb_active_attr_points -= 1
         
-            else:##linking the attraction point to the tree point
-                if not dclosest_point.has_key(c):
-                    dclosest_point[c] = []
+            elif c[1] != True:##linking the attraction point to the tree point
+                if not dclosest_point.has_key(c[0]):
+                    dclosest_point[c[0]] = []
                     
-                dclosest_point[c].append(i)
+                dclosest_point[c[0]].append(i)
         
         return dclosest_point
     
@@ -80,6 +79,7 @@ class space_colonization:
             return -1 
         
         dclosest_point = self.get_closest_tree_points(max_x,min_x)
+	#print (len(dclosest_point))
         
         if self.nb_active_attr_points == 0:
 #            print "No active attraction point left."
@@ -208,31 +208,36 @@ if __name__ == "__main__":
     else:
         
  #       print "generating 1000 random attr points"
-        for i in range(10000):
-            x = (random() * 10000.)
-            y = (random() * 500.)-250.
+        for i in range(600000):
+            x = (random() * 100000.)
+            y = (random() * 1000.)-500.
             z = 0#(random() * 100.) - 50.
             
             SC.add_attr_point(x,y,z)
     
-    
     Center=tree_point(-1.,0.,0.,0,None)
-    PROBA_XTINCT = [0.75,0.65,0.75]
-    SEUIL_XTINCT = [1500,5000,8000]
+    PROBA_XTINCT = [0.75,0.55,0.8,0.7,0.6,0.65,0.85,0.6,0.85,0.75,0.95,0.75,0.5]
+    SEUIL_XTINCT = [10000,25000,33000,55000,62000,68000,74000,79000,89767,91395,94186,98488]
 
 
     j = 0
+    count = 0
+    vseuil = 0 
     while j < IMAX:
-	if j%50 == 0:	
+	if j%50 == 0:
 		print j
+		#a=[] 	
+		#print (len(SC.tree_points_to_check))
+		
+		
         ##        SC.tree_points_to_check is what we need to modify... We remove some of them when they are at a given distance from the center
-        Lextinct = []        
+        Lextinct = [] 
+	   
         for p in SC.tree_points_to_check:
-
+            
             if SC.tree_points[p].alive :
-
                 dist = SC.tree_points[p].dist_from(Center)         
-    
+                
                 for i,seuil in enumerate(SEUIL_XTINCT):
                     if dist > seuil:
                         distParent = SC.tree_points[ SC.tree_points[p].parent ].dist_from(Center) ##distance of the parent to the center
@@ -240,15 +245,25 @@ if __name__ == "__main__":
                         if distParent < seuil:
                             res = random()
                             if res < PROBA_XTINCT[i]: ##extinction
-                            #print "extinction of point ", p, "dist:",dist
-                                Lextinct.append(p)
-                                Lextinct.append(SC.tree_points[p].parent)
+                                if i != vseuil:
+                                    vseuil=i
+                                    count = 0
+                                if not count == 0:	
+                                	Lextinct.append(p)
+                                	Lextinct.append(SC.tree_points[p].parent)
+                        count +=1
 ##########################################################
 	pxtocheck = [SC.tree_points[toto].x for toto in  SC.tree_points_to_check]
 #	print (pxtocheck)
         max_x = max(pxtocheck)
 #	print (max_x)
 	min_x = min(pxtocheck)
+	#if j%50 == 0:
+	#	for g in SC.attr_points:
+	#		if g.status == True and g.x > min_x and g.x < max_x+100:
+	#			a.append(g)
+	#	print len(a)
+
 ###########################################################
 
 ###old way
