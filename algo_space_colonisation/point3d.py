@@ -46,22 +46,22 @@ class attr_point(point3d):
         """
         
         m = self.max_r
-        
         mi = None
-	if self.x <= max_x+self.max_r+1 and self.x >= min_x:
+	back = False
+        if self.x <= max_x+m+1 and self.x > min_x:
             for i,p in enumerate(lp):
-                d = self.dist_from(p)
-            
-
+		d = self.dist_from(p)
+		if self.x < p.x:
+			back = True
+			return [None,back]
                 if d < m:
                     m = d
                     mi = p.id
-                
+                    back = False
                 if m <= self.min_r:
                     self.status = False
-                    return None
-        
-        return mi
+                    return [None,back]
+        return [mi,back]
 
     def in_min_radius(self,p):
         d = self.dist_from(p)
@@ -135,14 +135,14 @@ class tree_point(point3d):
         dx = sum(lx) / len(lx)
         dy = sum(ly) / len(ly)
         dz = sum(lz) / len(lz)
-        
 
         norm = (dx**2 + dy**2 + dz**2)**0.5
-    	'''gx = norm
+    	gx = norm
 	gy = 0.
 	dx = (dx+gx)/2
-	dy = (dy+gy)/2'''
-        
+	dy = (dy+gy)/2
+
+
         return dx/norm, dy/norm, dz/norm
     
     def create_son(self,lp):
@@ -153,19 +153,20 @@ class tree_point(point3d):
         Returns:
             (tree_point): son of self placed with the mean 3d vector from self to all point in lp
         """
+	
         vec = self.get_med_vector(lp)
         if not self.parent_vector is None:
-            dx = (vec[0] + self.parent_vector[0]) / 2.
-            dy = (vec[1] + self.parent_vector[1]) / 2.
-            dz = (vec[2] + self.parent_vector[2]) / 2.
+           dx = (vec[0] + self.parent_vector[0]) / 2.
+           dy = (vec[1] + self.parent_vector[1]) / 2.
+           dz = (vec[2] + self.parent_vector[2]) / 2.
 
-            norm = (dx**2 + dy**2 + dz**2)**0.5
+           # norm = (dx**2 + dy**2 + dz**2)**0.5
             	
-            vec = (dx/norm, dy/norm, dz/norm)
+           vec = (dx, dy, dz)
 
         if self.precvec  == vec:
-            if len(lp)> 1:
-                vec = self.get_med_vector(lp[1:])
+           if len(lp)> 1:
+               vec = self.get_med_vector(lp[1:])
     
         self.precvec = vec
         
