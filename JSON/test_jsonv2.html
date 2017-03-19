@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>JSON test</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="responsive.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -21,87 +22,11 @@
 </style>
 
 <body onload="responsive(),dessiner();">
-	<div id="monCadre" onscroll="myFunction">
-		<canvas id="myCanvas" width="15000" height="200" style="border:0px; border:1px; border-style:solid;">your browser does not support the HTML5 canvas tag.</canvas>
+	<div id="monCadre" onscroll="myFunction()">
+		<!-- un canvas sera injecté ici après le chargement de la page -->
 	</div>
-	<p id="myP" style="position:fixed; left:588px; height: 10%;" onload="dessiner()">
+	<p id="myP" style="position:fixed; left:588px; height: 10%;">
 		<i class="material-icons">navigation</i> 0.00 Million d'ann&#233;es
 	</p>
-
-<script>
-	var haut=Math.round(window.innerHeight*0.8);
-	function responsive() {
-		console.log("yolo1");
-		var contenu='<canvas id="myCanvas" width="15000" height="'+haut.toString()+'" style="border:0px; border:1px; border-style:solid;">your browser does not support the HTML5 canvas tag.</canvas>';
-		document.getElementById("monCadre").innerHTML = contenu;
-	}
-	var monJson = {};
-	$.ajax({
-		url: "JSON-ok-100000.json",
-		async: false,
-		dataType: 'json',
-		success: function(data) {
-			monJson = data;
-		}
-	});
-	function dessiner(){
-		var c=document.getElementById("myCanvas");
-		var ctx=c.getContext("2d");
-		var cty=c.getContext("2d");
-		ctx.fillStyle="#808080";
-		ctx.fillRect(0,0,15000,haut); 
-		cty.beginPath();
-
-		var x=0;
-		while(x<15000)	{
-			if (x % 100 == 0) {
-				cty.lineWidth=0.4;
-				cty.moveTo(x+600,haut);
-				cty.lineTo(x+600,haut-15);
-				cty.stroke();
-			}
-			else {
-				cty.lineWidth=0.1;
-				cty.moveTo(x+600,haut);
-				cty.lineTo(x+600,haut-7);
-				cty.stroke();
-			}
-			x=x+10;
-		};
-
-		ctx.scale(1,1);
-
-		ctx.lineWidth=3;
-		ctx.beginPath();
-		var demiHaut=Math.round(haut/2);
-		ctx.moveTo(600,demiHaut);
-		ctx.lineTo(601,demiHaut);
-		for(var i in monJson) {
-			var x1=monJson[i]["x"]/2+600;
-			var y1=monJson[i]["y"]/2+demiHaut;
-			ctx.moveTo(x1,y1);
-			ctx.lineTo(x1+10,y1);
-		}
-		ctx.strokeStyle="#0047b3";
-		ctx.stroke();
-	};
-
-	window.onscroll = function() {myFunction()};
-
-	function myFunction() {
-		var canvas=document.getElementById("myCanvas");
-		var pos=GetPosCanvas(canvas)
-		document.getElementById("myP").innerHTML='<i class="material-icons">navigation</i> '+(pos.x-6).toFixed(2)+" Millions d'ann&#233;es";
-	};
-
-	function GetPosCanvas(canvas) {
-			var rect = canvas.getBoundingClientRect();
-			return {
-				x: ((0-rect.left+600)*10000)/10**6
-			};
-	};
-</script>
-
-
 </body>	
 </html>
