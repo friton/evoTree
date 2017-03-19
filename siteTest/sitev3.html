@@ -6,12 +6,15 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="css/stylesv2.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
 	<title>Evotree</title>
 </head>
 
 <style>
 	html, body {font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive}
-	div.divArbre {padding: 0px 0px 0px 0px;}
+	div.divArbre {padding: 0px 0px 0px 0px;
+	}
 </style>
 
 <body>
@@ -24,10 +27,10 @@
 	
 	<div  id="droite", class=" w3-center">
 		<div class="w3-bar">
-			<button  class="w3-bar-item w3-btn w3-dark-grey w3-tiny w3-hover-black w3-text-white w3-hover-text-white " style="height:40px">
+			<button  id ="avant" class="w3-bar-item w3-btn w3-dark-grey w3-tiny w3-hover-black w3-text-white w3-hover-text-white " style="height:40px" onClick="arbre.goleft();" disabled >
 				<b><i class="material-icons w3-small">arrow_back</i></br>- 5 0 Ma </b><span>Reculer de 50 millions d'années </br>dans l'arbre de la vie</span>
 			</button>
-			<!--<i class="material-icons w3-large">arrow_back</i></br></button>-->
+			
 			<button id="ecran", class="w3-bar-item w3-btn w3-dark-grey w3-tiny w3-hover-black w3-text-white w3-hover-text-white" style="height:40px">
 				<b>Fini-ordovicienne</br>- 4 4 0 Ma </b>
 			</button>
@@ -53,7 +56,8 @@
 			</button>
 			<button id="mini", class="w3-bar-item w3-btn w3-dark-grey w3-tiny w3-hover-black w3-text-white w3-hover-text-white" style="height:40px"><img rel="icon "type="image/png" src="images/evo-homo-sapiens.png" style="height:27px">
 			</button>
-			<button  class="w3-bar-item w3-btn w3-dark-grey w3-tiny w3-hover-black w3-text-white w3-hover-text-white" style="height:40px"><i class="material-icons w3-small">arrow_forward</i></br>
+
+			<button id="next" class=" w3-bar-item w3-btn w3-dark-grey w3-tiny w3-hover-black w3-text-white w3-hover-text-white" style="height:40px" onClick="arbre.goright()"><i class="material-icons w3-small" >arrow_forward</i></br>
 				<b>+ 5 0 Ma</b><span>Avancer de 50 millions d'années</br>dans l'arbre de la vie.</span> 
 			</button>
 		</div>
@@ -65,8 +69,9 @@
 		<p></p>
 	</div>
 	<div class="w3-container s12 m12 l12 w3-white divArbre">
-		<iframe src="../JSON/test_jsonv2.html" height="100%" width="100%" style="border:0px;"></iframe>
+		<iframe name="arbre" src="tree-canvas.html" height="100%" width="100%" style="border:0px"></iframe>
 	</div>
+
 
 </body>
 </html>
