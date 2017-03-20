@@ -2,7 +2,7 @@ function DrawTree()
 {
 var monJson = {};
 	$.ajax({
-		url: "Arbre.json",
+		url: "5-30.json",
 		async: false,
 		dataType: 'json',
 		success: function(data) {
@@ -141,23 +141,47 @@ var monJson = {};
 		x=x+10;
 	} */
 
-	ctx.scale(2,2);
+	/*var x1=0
+	if (x1 < 28666.66) { 
+		ctx.scale(1,1);
 
-	ctx.lineWidth=4;
-	ctx.beginPath();
-	ctx.moveTo(600,250);
-	ctx.lineTo(601,250);
-	for(var i in monJson) {
+		ctx.lineWidth=4;
+		ctx.beginPath();
+		ctx.moveTo(600,250);
+		ctx.lineTo(601,250);
+		for(var i in monJson) {
+			x1=monJson[i]["x"]/2+600;
+			var y1=monJson[i]["y"]/2+120;
+			
+			ctx.moveTo(x1,y1);
+			ctx.lineTo(x1+10,y1);
+		}
+		ctx.strokeStyle="green";
+		ctx.stroke();
+	}*/
+	/*
+	var x2=0
+	if (x2 > 28666.66  && x2 < 57333.32) { 
+		ctx2.scale(1,1);
 
-
-		var x1=monJson[i]["x"]/2+600;
-		var y1=monJson[i]["y"]/2+120;
-		
-		ctx.moveTo(x1,y1);
-		ctx.lineTo(x1+10,y1);
+		ctx2.lineWidth=4;
+		ctx2.beginPath();
+		ctx2.moveTo(600,250);
+		ctx2.lineTo(601,250);
+		for(var i in monJson) {
+			x2=(monJson[i]["x"]/2);
+			var y2=(monJson[i]["y"]/2);
+			
+			ctx2.moveTo(x2-28666.66,y2);
+			ctx2.lineTo(x2-28666.66+10,y2);
+		}
+		ctx2.strokeStyle="green";
+		ctx2.stroke();
 	}
-	ctx.strokeStyle="green";
-	ctx.stroke();
+	*/
+
+
+
 }
 
 
