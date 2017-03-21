@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/stylesv2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="tree-anim.js"></script>
+	
+	<title>Evotree</title>
+</head>
+
+<style>
+	
+	
+</style>
+
+<body>
+
+<div id="global", class="w3-black">
+	
+	<div id="gauche">
+		<font color='white' style='font-size:15px'><b>EvoTree</b></font>
+	</div>
+	
+	<div  id="droite", class=" w3-center">
+		<div  class="w3-bar">
+			<button  id ="avant" class="-50 w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white " style="height:40px;width:60px;padding:1px;" onClick="arbre.goleft(); "  disabled  ><b><i class="material-icons ">arrow_back</i>
+			<span  >- 50 millions d'années </span>	
+			</button>
+			
+			<button id="ecran", class="ExtI w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('306000')">
+				<b>I| Fini-ordovicienne</br>
+				<span>
+					<p style="text-align:center"><font size='2' color="white" ><b>- 444 to 447 Ma</b>
+					
+					</span>
+				
+			</button>
+			
+			<button id="ecran", class="ExtII w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('313000')">
+				<b>II| Fini-devonienne</b></br>
+				<span>
+					<p style="text-align:center"><font size='2' color="white" ><b>- 360 to 380 Ma</b>
+					
+					</span>
+				
+			</button>
+			
+			<button id="ecran", class="ExtIII w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('325000')">
+				<b>III| Permo-triasique</b></br>
+				<span>
+					<p style="text-align:center"><font size='2' color="white" ><b>- 252 to 255 Ma</b>
+					
+					</span>
+				
+			</button>
+			
+			<button id="ecran", class="ExtIV w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('328000')">
+				<b>IV| Fini-triasique</b></br>
+				<span>
+					<p style="text-align:center"><font size='2' color="white" ><b>- 201 to 227 Ma</b>
+					
+					</span>
+				
+			</button>
+			
+			<button id="mini", class="ExtV w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('343500')">
+				<b>V| Crétacé-tertiaire</b></br>
+				<span>
+					<p style="text-align:center"><font size='2' color="white" ><b>- 66 Ma</b>
+					
+					</span>
+				
+			</button>
+			
+			<button id="mini", class="ExtVI w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('351300')"><img rel="icon "type="image/png" src="images/evo-homo-sapiens.png" style="height:27px" >
+				<span>
+					<p style="text-align:center"><font size='2' color="white" ><b>Aujourd'hui</b>
+					
+					</span>
+			</button>
+
+			<button id="next" class="plus50 w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white" style="height:40px; width:60px;padding:1px;" onClick="arbre.goright()"><i class="material-icons " >arrow_forward</i>
+			</button>
+		</div>
+	</div>
+
+</div>
+
+	
+	<div class="w3-container s12 m12 l12 w3-white divArbre" >
+		<iframe name="arbre" src="tree-canvas.html" height="100%" width="100%" style="border:0px"></iframe>
+	</div>
+
+
+</body>
+</html>

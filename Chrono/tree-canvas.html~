@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="tree-anim.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<style>
+		html, body, p, canvas	{
+		height: 100%;
+		font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
+		color: #2f2f2f;
+		margin: 0;
+		padding: 0;
+		background-color:#dfdfdf;
+	}
+
+</style>
+
+<script>
+	haut=window.innerHeight
+</script>
+
+<body >
+
+<div  style="width:351300px">
+
+	
+	<canvas id="myCanvas" width="28666.66" height="500" style="border:2px;border-style:solid; margin-left:0px; margin-right:0px;">
+		your browser does not support the HTML5 canvas tag.
+	</canvas>
+	<canvas id="myCanvas2" width="28666.66" height="500" style="border:2px;border-style:solid; margin-left:0px; margin-right:0px;">
+		c'est le deuxième canvas.
+	</canvas>
+	<canvas id="myCanvas3" width="28666.66" height="500" style="border:2px;border-style:solid; margin-left:0px; margin-right:0px;">
+		c'est le QUATRIÈMEcanvas.
+	</canvas>
+	
+	
+</div>
+	
+<p id="myP" style="position:fixed; left:593px; height:200px" >
+	<img rel="icon "type="image/png" src="curs.png"  style="height:17px; width:14px"><font size='2'>
+		-3.500 Milliards d'ann&#233;es</font>  
+</p>
+			
+	
+	
+<script>
+DrawTree()	
+</script>
+
+</body>
+</html>

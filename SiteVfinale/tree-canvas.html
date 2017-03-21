@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="tree-anim.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<style>
+		html, body, div, canvas	{
+		
+		font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
+		color: white;
+		margin:0;
+		padding: 0;
+		background-color:black;
+		margin-left:-5px;
+		
+		
+	}
+
+	p span{
+	display: block;
+	word-wrap:break-word;
+	width:250px ;
+	white-space: normal;
+	text-align: justify;
+	color: white;
+     position:absolute;                
+     margin-top:18px;
+     margin-left:-15px;
+     border-radius: 2px;
+     color:'white';
+     font-size: 12.5px;
+     background:black;
+     padding:8px;
+     
+     box-shadow:0 0 2px rgba(0,0,0,.5);
+     transform:scale(0.85) ;
+     transition:all .35s;
+     opacity:0;
+}
+
+p:hover span, p:focus span{
+    
+     transform:scale(1) rotate(0);        
+     opacity:0.70;
+}
+
+         
+         
+
+         
+
+         
+
+</style>
+
+<script>
+	haut=window.innerHeight
+</script>
+
+<body >
+
+<div  style="width:51500px">
+	<p style="position:absolute;margin-left:9580px;margin-top:300px;">LUCA<span>Le dernier ancêtre commun universel ou DACU est le plus récent organisme dont sont issues les trois lignées cellulaires et donc l'ensemble des espèces vivant actuellement sur Terre.</span></p>
+	
+	<!--Eons -->
+	<p style="position:absolute;margin-left:2005px;margin-top:2.5px;color:white;font-size:10px">HADEAN</p>
+	<p style="position:absolute;margin-left:7405px;margin-top:2.5px;color:white;font-size:10px">ARCHEAN</p>
+	<p style="position:absolute;margin-left:22405px;margin-top:2.5px;color:white;font-size:10px">PROTEROZOIC</p>
+	<p style="position:absolute;margin-left:41995px;margin-top:2.5px;color:white;font-size:10px">PHANEROZOIC</p>
+	
+	<!--Eres -->
+	<p style="position:absolute;margin-left:2005px;margin-top:20px;color:white;font-size:10px">HADEAN</p>
+	<p style="position:absolute;margin-left:7405px;margin-top:20px;color:white;font-size:10px">EOARCHEAN</p>
+	<p style="position:absolute;margin-left:11405px;margin-top:20px;color:white;font-size:10px">PALEOARCHEAN</p>
+	<p style="position:absolute;margin-left:15405px;margin-top:20px;color:white;font-size:10px">MESOARCHEAN</p>
+	<p style="position:absolute;margin-left:19405px;margin-top:20px;color:white;font-size:10px">NEOARCHEAN</p>
+
+	<img type="image/png" src="test.png" style="z-index:2;width:2000px;height:560px;">
+	
+	
+	<canvas id="myCanvas" width="22700" height="560" >
+		your browser does not support the HTML5 canvas tag.
+	
+	</canvas>
+<span id="LUCA"></span>
+	<canvas id="myCanvas2" width="22700" height="560" >
+		your browser does not support the HTML5 canvas tag.
+	</canvas>
+	<canvas id="myCanvas3" width="2000" height="560" >
+		your browser does not support the HTML5 canvas tag.
+	</canvas>
+	
+	
+	
+	
+</div>
+
+<p id="myP" style="position:fixed; left:595px;padding:0px;" > 
+	
+</p>
+
+	
+	
+<script>
+DrawTree()	
+</script>
+
+</body>
+</html>
