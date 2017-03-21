@@ -97,47 +97,48 @@ var monJson = {};
 	ctx.fillStyle="#FA5882"; //Rhyacien
 	ctx.fillRect(22400,520,22700,20);
 	ctx2.fillStyle="#FA5882";
-	ctx2.fillRect(0,520,4700,20);
+	ctx2.fillRect(0,520,2200,20);
 	ctx2.fillStyle="#F7819F"; //Orosirien
-	ctx2.fillRect(4700,520,6700,20);
+	ctx2.fillRect(2200,520,4700,20);
 	ctx2.fillStyle="#FE2E64"; //Stathérien
-	ctx2.fillRect(6700,520,8700,20);
+	ctx2.fillRect(4700,520,6700,20);
 	ctx2.fillStyle="#FA8258"; //Calymmien
-	ctx2.fillRect(8700,520,10700,20);
+	ctx2.fillRect(6700,520,8700,20);
 	ctx2.fillStyle="#F79F81"; //Ectasien
-	ctx2.fillRect(10700,520,12700,20);
+	ctx2.fillRect(8700,520,10700,20);
 	ctx2.fillStyle="#FF8000"; //Stenian
-	ctx2.fillRect(12700,520,15500,20);
+	ctx2.fillRect(10700,520,12700,20);
 	ctx2.fillStyle="#FE9A2E"; //Tonian
-	ctx2.fillRect(15500,520,16350,20);
+	ctx2.fillRect(12700,520,15500,20);
 	ctx2.fillStyle="#FACC2E"; //Cryogenian
+	ctx2.fillRect(15500,520,16350,20);
+	ctx2.fillStyle="#F2F5A9"; //Ediacaran #F2F5A9
 	ctx2.fillRect(16350,520,17290,20);
-	ctx2.fillStyle="#4B8A08"; //Ediacaran
+	ctx2.fillStyle="#4B8A08"; //Cambrian
 	ctx2.fillRect(17290,520,17846,20);
-	ctx2.fillStyle="#0B614B"; //Cambrian
-	ctx2.fillRect(17846,520,18262,20);
-	ctx2.fillStyle="#74DF00"; //Ordovician
-	ctx2.fillRect(18262,520,18508,20);
-	ctx2.fillStyle="#B45F04"; //Silurian
+	ctx2.fillStyle="#0B614B"; //Ordovician
+	ctx2.fillRect(17846,520,18261.99,20);
+	ctx2.fillStyle="#74DF00"; //Silurian
+	ctx2.fillRect(18261.99,520,18508,20);
+	ctx2.fillStyle="#B45F04"; //Devonien
 	ctx2.fillRect(18508,520,19111,20);
-	ctx2.fillStyle="#088A68"; //Devonien
+	ctx2.fillStyle="#088A68"; //Carboniferous
 	ctx2.fillRect(19111,520,19711,20);
-	ctx2.fillStyle="#FF0000"; //Carboniferous
+	ctx2.fillStyle="#FF0000"; //Permian
 	ctx2.fillRect(19711,520,20181,20);
-	ctx2.fillStyle="#7401DF"; //Permian
+	ctx2.fillStyle="#7401DF"; //Triassic
 	ctx2.fillRect(20181,520,20687,20);
-	ctx2.fillStyle="#045FB4"; //Triassic
+	ctx2.fillStyle="#045FB4"; //Jurassic
 	ctx2.fillRect(20687,520,21250,20);
-	ctx2.fillStyle="#31B404"; //Jurassic
+	ctx2.fillStyle="#31B404"; //Cretaceous
 	ctx2.fillRect(21250,520,22040,20);
-	ctx2.fillStyle="#FF8000"; //Cretaceous
+	ctx2.fillStyle="#FF8000"; //Paleogene
 	ctx2.fillRect(22040,520,22469.7,20);
-	ctx2.fillStyle="#FACC2E"; //Paleogene
+	ctx2.fillStyle="#FACC2E"; //Neogene
 	ctx2.fillRect(22469.7,520,22674.2,20);
-	ctx2.fillStyle="#F4FA58"; //Neogene
-	ctx2.fillRect(22674.2,520,22699,20);
 	ctx2.fillStyle="#F4FA58"; //Quaternary
-	ctx2.fillRect(22699,520,22700,20); 
+	ctx2.fillRect(22674.2,520,22700,20); 
+
 
 	//Epoques
 	
