@@ -6,7 +6,7 @@ html,body {
 	margin: 0;
 	padding: 0;
 	overflow-y: hidden;
-    font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
+	font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
 } 
 
 
@@ -31,30 +31,30 @@ html,body {
   vertical-align: middle;
 }
 #global #gauche {
-    float:left;
-    width:80px;
-    text-align: center;
-    color:white;
-    height: 100%;
-    line-height: 100%;
-    vertical-align: middle;
-    padding-top: 1%
+	float:left;
+	width:80px;
+	text-align: center;
+	color:white;
+	height: 100%;
+	line-height: 100%;
+	vertical-align: middle;
+	padding-top: 1%
 }
 #global #droite  {
-    margin-top: 0px;
-    margin-left:80px;
-    height: 100%;
+	margin-top: 0px;
+	margin-left:80px;
+	height: 100%;
 
 
-    
-    
+	
+	
 }
 
 #global #droite.visible{
-    
-    
-    display: block;    
-    
+	
+	
+	display: block;    
+	
 }
 
 
@@ -106,17 +106,17 @@ html,body {
 
 .divArbre {
 	height: 94%;
-    padding: 0px 0px 0px 0px;
-    background-color: #dfdfdf;
+	padding: 0px 0px 0px 0px;
+	background-color: #dfdfdf;
 }
 
 
 
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 li {
 
@@ -128,10 +128,10 @@ display:inline;
 {
 
 #ecran{
-    
-    display: none;
-    
-    }
+	
+	display: none;
+	
+	}
    
 }
 
@@ -139,10 +139,10 @@ display:inline;
 {
 
 #mini{
-    
-    display: none;
-    
-    }
+	
+	display: none;
+	
+	}
    
 }
 
@@ -150,22 +150,22 @@ display:inline;
 {
 
 #global #gauche {
-    
-    display: none;
-    
-    }
+	
+	display: none;
+	
+	}
    
 }
 
 
 
 button{
-     color:#ccc;
-     
+	 color:#ccc;
+	 
 }
 button:hover,button:focus{
-    
-     
+	
+	 
 
 }
 
@@ -175,24 +175,24 @@ button span{
 	max-width:250px ;
 	white-space: normal;
 	text-align: justify;
-     position:absolute;                
-     margin-top:18px;
-     margin-left:-15px;
-     border-radius: 2px;
-     color:'white';
-     font-size: 12.5px;
-     background:black;
-     padding:8px;
-     
-     box-shadow:0 0 2px rgba(0,0,0,.5);
-     transform:scale(0.85) ;
-     transition:all .35s;
-     opacity:0;
+	position:absolute;                
+	margin-top:18px;
+	margin-left:-15px;
+	border-radius: 2px;
+	color:'white';
+	font-size: 12.5px;
+	background:black;
+	padding:8px;
+	
+	box-shadow:0 0 2px rgba(0,0,0,.5);
+	transform:scale(0.85) ;
+	transition:all .35s;
+	opacity:0;
 }
 
 button:hover span, button:focus span{
-    
-     transform:scale(1) rotate(0);        
-     opacity:0.70;
+	
+	 transform:scale(1) rotate(0);        
+	 opacity:0.70;
 }
 
