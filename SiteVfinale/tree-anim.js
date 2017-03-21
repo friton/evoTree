@@ -91,8 +91,7 @@ var monJson = {};
 	ctx2.fillRect(22040,20, 22700,20);
 	
 	//Périodes
-	ctx.fillStyle="#848484"; //Hadéen-Archéen
-	ctx.fillRect(0,520,20400,20);
+	
 	ctx.fillStyle="#FE2E64"; //Sidérien
 	ctx.fillRect(20400,520,22400,20);
 	ctx.fillStyle="#FA5882"; //Rhyacien
@@ -141,10 +140,8 @@ var monJson = {};
 	ctx2.fillRect(22699,520,22700,20); 
 
 	//Epoques
-	ctx.fillStyle="#848484"; //Hadéen-Archéen-Proterozoic
-	ctx.fillRect(0,540,22700,20);
-	ctx2.fillStyle="#848484";
-	ctx2.fillRect(0,540,17290,20);
+	
+	
 	ctx2.fillStyle="#8FBC8F";//Terreneuvian
 	ctx2.fillRect(17290,540,17490,20);
 	ctx2.fillStyle="#3CB371";//Cambrian Series 2
@@ -212,7 +209,7 @@ var monJson = {};
 	ctx2.fillStyle="#F5F5DC";//Pleistocene
 	ctx2.fillRect(22674.2,540,22699.5,20);
 	ctx2.fillStyle="#FF0000";//Holocene
-	ctx2.fillRect(22699,540,22700,20);
+	ctx2.fillRect(22698,540,22700,20);
 
 
 		
@@ -250,6 +247,7 @@ ctx.scale(1,1);
 	cty2.stroke();
 
 	window.parent.$('.w3-bar').hide();
+	$('#myP').hide();
 
 }
 
@@ -289,8 +287,9 @@ function ScrollEv() {
 	if(window.scrollX<=1380)
 	{window.parent.document.getElementById("avant").disabled = true;
 	window.parent.$('.w3-bar').hide(2000);
-	document.getElementById("myP").innerHTML='';
-	$('#myP').hide(500);
+	
+
+	$('#myP').hide(1000);
             }
     
 

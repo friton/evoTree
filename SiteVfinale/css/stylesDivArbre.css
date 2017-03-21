@@ -1,0 +1,46 @@
+html, body, div, canvas	{
+		
+		font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
+		color: white;
+		margin:0;
+		padding: 0;
+		background-color:black;
+		margin-left:-5px;
+		
+		
+	}
+
+	p span{
+	display: block;
+	word-wrap:break-word;
+	width:250px ;
+	white-space: normal;
+	text-align: justify;
+	color: white;
+     position:absolute;                
+     margin-top:18px;
+     margin-left:-15px;
+     border-radius: 2px;
+     color:'white';
+     font-size: 12.5px;
+     background:black;
+     padding:8px;
+     
+     box-shadow:0 0 2px rgba(0,0,0,.5);
+     transform:scale(0.85) ;
+     transition:all .35s;
+     opacity:0;
+}
+
+p:hover span, p:focus span{
+    
+     transform:scale(1) rotate(0);        
+     opacity:0.70;
+}
+
+         
+         
+
+         
+
+        

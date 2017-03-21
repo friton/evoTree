@@ -5,57 +5,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="tree-anim.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/stylesDivArbre.css">
 </head>
 
-<style>
-		html, body, div, canvas	{
-		
-		font-family: 'Lucida Caligraphy', 'Monotype Corsiva', cursive;
-		color: white;
-		margin:0;
-		padding: 0;
-		background-color:black;
-		margin-left:-5px;
-		
-		
-	}
-
-	p span{
-	display: block;
-	word-wrap:break-word;
-	width:250px ;
-	white-space: normal;
-	text-align: justify;
-	color: white;
-     position:absolute;                
-     margin-top:18px;
-     margin-left:-15px;
-     border-radius: 2px;
-     color:'white';
-     font-size: 12.5px;
-     background:black;
-     padding:8px;
-     
-     box-shadow:0 0 2px rgba(0,0,0,.5);
-     transform:scale(0.85) ;
-     transition:all .35s;
-     opacity:0;
-}
-
-p:hover span, p:focus span{
-    
-     transform:scale(1) rotate(0);        
-     opacity:0.70;
-}
-
-         
-         
-
-         
-
-         
-
-</style>
 
 <script>
 	haut=window.innerHeight
@@ -67,19 +19,86 @@ p:hover span, p:focus span{
 	<p style="position:absolute;margin-left:9580px;margin-top:300px;">LUCA<span>Le dernier ancêtre commun universel ou DACU est le plus récent organisme dont sont issues les trois lignées cellulaires et donc l'ensemble des espèces vivant actuellement sur Terre.</span></p>
 	
 	<!--Eons -->
-	<p style="position:absolute;margin-left:2005px;margin-top:2.5px;color:white;font-size:10px">HADEAN</p>
-	<p style="position:absolute;margin-left:7405px;margin-top:2.5px;color:white;font-size:10px">ARCHEAN</p>
-	<p style="position:absolute;margin-left:22405px;margin-top:2.5px;color:white;font-size:10px">PROTEROZOIC</p>
-	<p style="position:absolute;margin-left:41995px;margin-top:2.5px;color:white;font-size:10px">PHANEROZOIC</p>
+	<p style="position:absolute;margin-left:2005px;margin-top:2px;color:white;font-size:10px">HADEAN</p>
+	<p style="position:absolute;margin-left:7405px;margin-top:2px;color:white;font-size:10px">ARCHEAN</p>
+	<p style="position:absolute;margin-left:22405px;margin-top:2px;color:white;font-size:10px">PROTEROZOIC</p>
+	<p style="position:absolute;margin-left:41995px;margin-top:2px;color:white;font-size:10px">PHANEROZOIC</p>
 	
 	<!--Eres -->
-	<p style="position:absolute;margin-left:2005px;margin-top:20px;color:white;font-size:10px">HADEAN</p>
-	<p style="position:absolute;margin-left:7405px;margin-top:20px;color:white;font-size:10px">EOARCHEAN</p>
-	<p style="position:absolute;margin-left:11405px;margin-top:20px;color:white;font-size:10px">PALEOARCHEAN</p>
-	<p style="position:absolute;margin-left:15405px;margin-top:20px;color:white;font-size:10px">MESOARCHEAN</p>
-	<p style="position:absolute;margin-left:19405px;margin-top:20px;color:white;font-size:10px">NEOARCHEAN</p>
+	<p style="position:absolute;margin-left:2005px;margin-top:22px;color:white;font-size:10px">HADEAN</p>
+	<p style="position:absolute;margin-left:7405px;margin-top:22px;color:white;font-size:10px">EOARCHEAN</p>
+	<p style="position:absolute;margin-left:11405px;margin-top:22px;color:white;font-size:10px">PALEOARCHEAN</p>
+	<p style="position:absolute;margin-left:15405px;margin-top:22px;color:white;font-size:10px">MESOARCHEAN</p>
+	<p style="position:absolute;margin-left:19405px;margin-top:22px;color:white;font-size:10px">NEOARCHEAN</p>
+	<p style="position:absolute;margin-left:22405px;margin-top:22px;color:white;font-size:10px">PALEOPROTEROZOIC</p>
+	<p style="position:absolute;margin-left:31405px;margin-top:22px;color:white;font-size:10px">MESOPROTEROZOIC</p>
+	<p style="position:absolute;margin-left:37405px;margin-top:22px;color:white;font-size:10px">NEOPROTEROZOIC</p>
+	<p style="position:absolute;margin-left:41995px;margin-top:22px;color:white;font-size:10px">PALEOSOIC</p>
+	<p style="position:absolute;margin-left:44885px;margin-top:22px;color:white;font-size:10px">MESOZOIC</p>
+	<p style="position:absolute;margin-left:46745px;margin-top:22px;color:white;font-size:10px">CENOZOIC</p>
 
-	<img type="image/png" src="test.png" style="z-index:2;width:2000px;height:560px;">
+	<!-- Periodes -->
+	<p style="position:absolute;margin-left:22405px;margin-top:522px;color:white;font-size:10px">SIDERIAN</p>
+	<p style="position:absolute;margin-left:24405px;margin-top:522px;color:white;font-size:10px">RHYACIAN</p>
+	<p style="position:absolute;margin-left:29405px;margin-top:522px;color:white;font-size:10px">OROSIRIAN</p>
+	<p style="position:absolute;margin-left:31405px;margin-top:522px;color:white;font-size:10px">STATHERIAN</p>
+	<p style="position:absolute;margin-left:33405px;margin-top:522px;color:white;font-size:10px">CALYMMIAN</p>
+<p style="position:absolute;margin-left:35405px;margin-top:522px;color:white;font-size:10px">ECTASIAN</p>
+<p style="position:absolute;margin-left:37405px;margin-top:522px;color:white;font-size:10px">STENIAN</p>
+<p style="position:absolute;margin-left:40205px;margin-top:522px;color:white;font-size:10px">TONIAN</p>
+<p style="position:absolute;margin-left:41055px;margin-top:522px;color:white;font-size:10px">CRYOGENIAN</p>
+<p style="position:absolute;margin-left:41995px;margin-top:522px;color:white;font-size:10px">EDIACARAN</p>
+<p style="position:absolute;margin-left:42551px;margin-top:522px;color:white;font-size:10px">CAMBRIAN</p>
+<p style="position:absolute;margin-left:42967px;margin-top:522px;color:white;font-size:10px">ORDOVICIAN</p>
+<p style="position:absolute;margin-left:43213px;margin-top:522px;color:white;font-size:10px">SILURIAN</p>
+<p style="position:absolute;margin-left:43816px;margin-top:522px;color:white;font-size:10px">DEVONIAN</p>
+<p style="position:absolute;margin-left:44416px;margin-top:522px;color:white;font-size:10px">CARBONIFEROUS</p>
+<p style="position:absolute;margin-left:44886px;margin-top:522px;color:white;font-size:10px">PERMIAN</p>
+<p style="position:absolute;margin-left:45392px;margin-top:522px;color:white;font-size:10px">TRIASSIC</p>
+<p style="position:absolute;margin-left:45955px;margin-top:522px;color:white;font-size:10px">JURASSIC</p>
+<p style="position:absolute;margin-left:46745px;margin-top:522px;color:white;font-size:10px">CRETACEOUS</p>
+<p style="position:absolute;margin-left:47174.7px;margin-top:522px;color:white;font-size:10px">PALEOGENE</p>
+<p style="position:absolute;margin-left:47379.2px;margin-top:522px;color:white;font-size:10px">N</p>
+
+
+<!-- Epoques-->
+
+<p style="position:absolute;margin-left:41995px;margin-top:542px;color:white;font-size:10px">TERRENEUVIAN</p>
+<p style="position:absolute;margin-left:42195px;margin-top:542px;color:white;font-size:10px">SERIES 2</p>
+<p style="position:absolute;margin-left:42315px;margin-top:542px;color:white;font-size:10px">SERIES 3</p>
+<p style="position:absolute;margin-left:42435px;margin-top:542px;color:white;font-size:10px">FURONGIAN</p>
+<p style="position:absolute;margin-left:42551px;margin-top:542px;color:white;font-size:10px">LOWER</p>
+<p style="position:absolute;margin-left:42705px;margin-top:542px;color:white;font-size:10px">MIDDLE</p>
+<p style="position:absolute;margin-left:42821px;margin-top:542px;color:white;font-size:10px">UPPER</p>
+<p style="position:absolute;margin-left:42966.9px;margin-top:542px;color:white;font-size:10px">LLANDOVERY</p>
+<p style="position:absolute;margin-left:43071px;margin-top:542px;color:white;font-size:10px">WENLOCK</p>
+<p style="position:absolute;margin-left:43131px;margin-top:542px;color:white;font-size:10px">L</p>
+<p style="position:absolute;margin-left:43175px;margin-top:542px;color:white;font-size:10px">P</p>
+<p style="position:absolute;margin-left:43213px;margin-top:542px;color:white;font-size:10px">LOWER</p>
+<p style="position:absolute;margin-left:43472px;margin-top:542px;color:white;font-size:10px">MIDDLE</p>
+<p style="position:absolute;margin-left:43578px;margin-top:542px;color:white;font-size:10px">UPPER</p>
+<p style="position:absolute;margin-left:43816px;margin-top:542px;color:white;font-size:10px">MISSISSIPIAN</p>
+<p style="position:absolute;margin-left:44173px;margin-top:542px;color:white;font-size:10px">PENNSYLVANIAN</p>
+<p style="position:absolute;margin-left:44416px;margin-top:542px;color:white;font-size:10px">CISURALIAN</p>
+<p style="position:absolute;margin-left:44675px;margin-top:542px;color:white;font-size:10px">GUADALUPIAN</p>
+<p style="position:absolute;margin-left:44814px;margin-top:542px;color:white;font-size:10px">LOPINGIAN</p>
+<p style="position:absolute;margin-left:44885px;margin-top:542px;color:white;font-size:10px">LOWER</p>
+<p style="position:absolute;margin-left:44933px;margin-top:542px;color:white;font-size:10px">MIDDLE</p>
+<p style="position:absolute;margin-left:45035px;margin-top:542px;color:white;font-size:10px">UPPER</p>
+<p style="position:absolute;margin-left:45392px;margin-top:542px;color:white;font-size:10px">LOWER</p>
+<p style="position:absolute;margin-left:45664px;margin-top:542px;color:white;font-size:10px">MIDDLE</p>
+<p style="position:absolute;margin-left:45770px;margin-top:542px;color:white;font-size:10px">UPPER</p>
+<p style="position:absolute;margin-left:45955px;margin-top:542px;color:white;font-size:10px">LOWER</p>
+<p style="position:absolute;margin-left:46400px;margin-top:542px;color:white;font-size:10px">UPPER</p>
+<p style="position:absolute;margin-left:46745px;margin-top:542px;color:white;font-size:10px">PALEOCENE</p>
+<p style="position:absolute;margin-left:46845px;margin-top:542px;color:white;font-size:10px">EOCENE</p>
+<p style="position:absolute;margin-left:47066px;margin-top:542px;color:white;font-size:10px">OLIGOCENE</p>
+<p style="position:absolute;margin-left:47174px;margin-top:542px;color:white;font-size:10px">MIOCENE</p>
+<p style="position:absolute;margin-left:47352px;margin-top:542px;color:white;font-size:10px">P</p>
+<p style="position:absolute;margin-left:47379px;margin-top:542px;color:white;font-size:10px">P</p>
+
+
+	<img type="image/png" src="welcome_v5.png" style="z-index:2;width:2000px;height:560px;">
 	
 	
 	<canvas id="myCanvas" width="22700" height="560" >
@@ -100,7 +119,7 @@ p:hover span, p:focus span{
 </div>
 
 <p id="myP" style="position:fixed; left:595px;padding:0px;" > 
-	
+<img rel="icon "type="image/png" src="images/curs2.png"  style="height:17px; width:14px;color:white;"><font size="2">4.540 Milliards d'ann&#233;es</font>	
 </p>
 
 	
