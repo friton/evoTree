@@ -2,7 +2,7 @@ function DrawTree()
 {
 var monJson = {};
 	$.ajax({
-		url: "JSON/JSON-ok.json",
+		url: "JSON/TreeOfLife.json",
 		async: false,
 		dataType: 'json',
 		success: function(data) {
