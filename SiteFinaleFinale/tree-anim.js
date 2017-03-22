@@ -17,19 +17,12 @@ var monJson = {};
 	
 	var c=document.getElementById("myCanvas");
 	var c2=document.getElementById("myCanvas2");
-	var c3=document.getElementById("myCanvas3");
-	
-
 	
 	var ctx=c.getContext("2d");
 	var ctx2=c2.getContext("2d");
-	var ctx3=c3.getContext("2d");
-	
 
 	var cty=c.getContext("2d");
 	var cty2=c2.getContext("2d");
-	var cty3=c3.getContext("2d");
-	
 
 	var ctt=c.getContext("2d");
 	
