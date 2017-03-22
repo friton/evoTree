@@ -31,7 +31,7 @@ var monJson = {};
 	ctt.font = "bold 12px Asap";
 	ctt.fillStyle="white";
 	ctt.fillText("Bienvenue dans notre arbre de l'évolution...",50,280);
-	ctt.fillText("La première forme de vie serait apparu il y a 3.8 milliards d'années ...",5000,280);
+	ctt.fillText("La première forme de vie serait apparue il y a 3.8 milliards d'années ...",5000,280);
 	ctt.fillText("Notre planète Terre est née il y a environ 4.5 milliards d'années ...",1000,280);
 	ctt.fillText("A long time ago in a galaxy far, far away....",3000,280);
 	
