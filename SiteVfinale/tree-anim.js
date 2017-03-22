@@ -1,5 +1,8 @@
+
 function DrawTree()
 {
+	window.parent.$('.w3-bar').hide();
+	$('#myP').hide();
 var monJson = {};
 	$.ajax({
 		url: "JSON/TreeOfLife.json",
@@ -31,14 +34,15 @@ var monJson = {};
 	
 	
 	
-	ctt.font = "bold 11px Asap";
-	ctt.fillStyle="#f3f781";
-	ctt.fillText("Bienvenue dans notre arbre de l'évolution. 		Nous vous invitons à le découvrir ...",50,200);
-	ctt.fillText("La première forme de vie serait apparu il y a 3.8 milliards d'années ...",4000,200);
-	ctt.fillText("Notre planète Terre est née il y a environ 4.5 milliards d'années ...",600,200);
+	ctt.font = "bold 12px Asap";
+	ctt.fillStyle="white";
+	ctt.fillText("Bienvenue dans notre arbre de l'évolution ...",50,280);
+	ctt.fillText("Notre planète Terre est née il y a environ 4.54 milliards d'années ...",1000,280);
+	ctt.fillText("La première forme de vie serait apparu 740 millions d'années plus tard ...",5000,280);
 	
 	
-	ctt.fillText("1 pixel : 100 000 ans",450,557) ;
+	
+	
 	
 	
 	//var x=0;
@@ -97,48 +101,47 @@ var monJson = {};
 	ctx.fillStyle="#FA5882"; //Rhyacien
 	ctx.fillRect(22400,520,22700,20);
 	ctx2.fillStyle="#FA5882";
-	ctx2.fillRect(0,520,2200,20);
+	ctx2.fillRect(0,520,4700,20);
 	ctx2.fillStyle="#F7819F"; //Orosirien
-	ctx2.fillRect(2200,520,4700,20);
-	ctx2.fillStyle="#FE2E64"; //Stathérien
 	ctx2.fillRect(4700,520,6700,20);
-	ctx2.fillStyle="#FA8258"; //Calymmien
+	ctx2.fillStyle="#FE2E64"; //Stathérien
 	ctx2.fillRect(6700,520,8700,20);
-	ctx2.fillStyle="#F79F81"; //Ectasien
+	ctx2.fillStyle="#FA8258"; //Calymmien
 	ctx2.fillRect(8700,520,10700,20);
-	ctx2.fillStyle="#FF8000"; //Stenian
+	ctx2.fillStyle="#F79F81"; //Ectasien
 	ctx2.fillRect(10700,520,12700,20);
-	ctx2.fillStyle="#FE9A2E"; //Tonian
+	ctx2.fillStyle="#FF8000"; //Stenian
 	ctx2.fillRect(12700,520,15500,20);
-	ctx2.fillStyle="#FACC2E"; //Cryogenian
+	ctx2.fillStyle="#FE9A2E"; //Tonian
 	ctx2.fillRect(15500,520,16350,20);
-	ctx2.fillStyle="#F2F5A9"; //Ediacaran #F2F5A9
+	ctx2.fillStyle="#FACC2E"; //Cryogenian
 	ctx2.fillRect(16350,520,17290,20);
-	ctx2.fillStyle="#4B8A08"; //Cambrian
+	ctx2.fillStyle="#4B8A08"; //Ediacaran
 	ctx2.fillRect(17290,520,17846,20);
-	ctx2.fillStyle="#0B614B"; //Ordovician
-	ctx2.fillRect(17846,520,18261.99,20);
-	ctx2.fillStyle="#74DF00"; //Silurian
-	ctx2.fillRect(18261.99,520,18508,20);
-	ctx2.fillStyle="#B45F04"; //Devonien
+	ctx2.fillStyle="#0B614B"; //Cambrian
+	ctx2.fillRect(17846,520,18262,20);
+	ctx2.fillStyle="#74DF00"; //Ordovician
+	ctx2.fillRect(18262,520,18508,20);
+	ctx2.fillStyle="#B45F04"; //Silurian
 	ctx2.fillRect(18508,520,19111,20);
-	ctx2.fillStyle="#088A68"; //Carboniferous
+	ctx2.fillStyle="#088A68"; //Devonien
 	ctx2.fillRect(19111,520,19711,20);
-	ctx2.fillStyle="#FF0000"; //Permian
+	ctx2.fillStyle="#FF0000"; //Carboniferous
 	ctx2.fillRect(19711,520,20181,20);
-	ctx2.fillStyle="#7401DF"; //Triassic
+	ctx2.fillStyle="#7401DF"; //Permian
 	ctx2.fillRect(20181,520,20687,20);
-	ctx2.fillStyle="#045FB4"; //Jurassic
+	ctx2.fillStyle="#045FB4"; //Triassic
 	ctx2.fillRect(20687,520,21250,20);
-	ctx2.fillStyle="#31B404"; //Cretaceous
+	ctx2.fillStyle="#31B404"; //Jurassic
 	ctx2.fillRect(21250,520,22040,20);
-	ctx2.fillStyle="#FF8000"; //Paleogene
+	ctx2.fillStyle="#FF8000"; //Cretaceous
 	ctx2.fillRect(22040,520,22469.7,20);
-	ctx2.fillStyle="#FACC2E"; //Neogene
+	ctx2.fillStyle="#FACC2E"; //Paleogene
 	ctx2.fillRect(22469.7,520,22674.2,20);
+	ctx2.fillStyle="#F4FA58"; //Neogene
+	ctx2.fillRect(22674.2,520,22699,20);
 	ctx2.fillStyle="#F4FA58"; //Quaternary
-	ctx2.fillRect(22674.2,520,22700,20); 
-
+	ctx2.fillRect(22699,520,22700,20); 
 
 	//Epoques
 	
@@ -234,8 +237,8 @@ ctx.scale(1,1);
 		var y1=monJson[i]["y"]+310.5;
 		if (x1<=4600){
 		
-		ctx.moveTo(x1+7600.5,y1);
-		ctx.lineTo(x1+7601.5,y1);
+		ctx.moveTo(x1+7400.5,y1);
+		ctx.lineTo(x1+7401.5,y1);
 	}
 	else
 	{cty2.moveTo(x1-4600.5,y1);
@@ -285,23 +288,43 @@ function ScrollEv() {
 	var pos=GetPosCanvas(canvas);
 	
 	
-	if(window.scrollX<=1380)
-	{window.parent.document.getElementById("avant").disabled = true;
-	window.parent.$('.w3-bar').hide(2000);
+	if(window.scrollX<=1000)
+    {window.parent.document.getElementById("avant").disabled = true;
+	window.parent.$('.w3-bar').hide(500);
 	
+	$('#myP').hide(300);	
+    }
 
-	$('#myP').hide(1000);
+    else if (window.scrollX<=1380)
+	{window.parent.document.getElementById("avant").disabled = true;
+	window.parent.$('.w3-bar').show(500);
+	document.getElementById("myP").innerHTML='<img rel="icon "type="image/png" src="images/curs2.png"  style="height:17px; width:14px;color:white;"><font size="2">	'+"4.540 Milliards d'ann&#233;es</font>";
+	$('#myP').show(300);
+	
             }
-    
 
 
-	else
+	else if (window.scrollX<=46780)
 		{window.parent.document.getElementById("avant").disabled = false;
 		
-		window.parent.$('.w3-bar').show(2000);
+		window.parent.$('.w3-bar').show(500);
 		document.getElementById("myP").innerHTML='<img rel="icon "type="image/png" src="images/curs2.png"  style="height:17px; width:14px;color:white;"><font size="2">	'+((((-4540000000)+((pos.x-1380)*100000)))/1000000000).toFixed(3)+" Milliards d'ann&#233;es</font>";
-		$('#myP').show(500);
+		$('#myP').show(300);
     	}
+
+    else if (window.scrollX<=47000)
+		{window.parent.document.getElementById("avant").disabled = false;
+		
+		window.parent.$('.w3-bar').show(500);
+		document.getElementById("myP").innerHTML='<img rel="icon "type="image/png" src="images/curs2.png"  style="height:17px; width:14px;color:white;"><font size="2">	'+"0.000 Milliards d'ann&#233;es</font>";
+		$('#myP').show(300);	
+    	}
+    else
+    	{window.parent.document.getElementById("avant").disabled = true;
+	window.parent.$('.w3-bar').hide(500);
+	
+	$('#myP').hide(300);	
+    }
 
 
 	
@@ -332,7 +355,7 @@ function goleft()
 	{window.parent.document.getElementById("avant").disabled = true;}
 else{
 	
-	$('html, body').animate( { scrollLeft: '-=1000' }, 7500);
+	$('html, body').animate( { scrollLeft: '-=5000' }, 3500);
 	window.parent.document.getElementById("avant").disabled = false;
 }}
 
@@ -345,7 +368,7 @@ if(window.scrollX>349900)
 	{window.parent.document.getElementById("next").disabled = true;}
 	else
 		{window.parent.document.getElementById("next").disabled = false;
-		$('html, body').animate( { scrollLeft: '+=1000' }, 7500);
+		$('html, body').animate( { scrollLeft: '+=5000' }, 3500);
 }
     
 }
@@ -358,7 +381,7 @@ function goTo(x)
 
  $(document).ready(function() {
     $('.-50').hover(function() {
-      $(this).html('- 100 Ma');
+      $(this).html('- 500 M.y.');
     }, function() {
       $(this).html('<i class="material-icons ">arrow_back</i>');
     });
@@ -368,7 +391,7 @@ function goTo(x)
 
  $(document).ready(function() {
     $('.plus50').hover(function() {
-      $(this).html('+ 100 Ma');
+      $(this).html('+ 500 M.y.');
     }, function() {
       $(this).html('<i class="material-icons ">arrow_forward</i>');
     });
