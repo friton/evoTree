@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap">
+	<link rel="stylesheet" href="css/stylesStructureSite.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="tree-anim.js"></script>
+	
+	<title>evoTree</title>
+</head>
+
+<style>
+	html, body {
+		font-family: 'Asap', sans-serif;
+	}
+	
+</style>
+
+<body>
+
+<div id="global", class="w3-black">
+	
+	<div id="gauche">
+		<font color='white' style='font-size:15px'>evoTree</font>
+	</div>
+	
+	<div  id="droite", class=" w3-center">
+		<div  class="w3-bar">
+			<button  id ="avant" class="-50 w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white " style="height:40px;width:60px;padding:1px;" onClick="arbre.goleft(); "  disabled  >
+				<i class="material-icons ">arrow_back</i>
+				<span>-50 M.y.</span>	
+			</button>
+			
+			<button id="ecran", class="ExtI w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('1380')">
+				Earth birth
+				<span>
+					<p style="text-align:center"><font size='2' color="white" >-4540 M.y.
+				</span>
+			</button>
+
+			<button id="ecran", class="ExtI w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('42330')">
+				I| Fini-ordovicienne
+				<span>
+					<p style="text-align:center"><font size='2' color="white" >-444 to -447 M.y.
+				</span>
+			</button>
+			
+			<button id="ecran", class="ExtII w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('43080')">
+				II| Fini-devonienne
+				<span>
+					<p style="text-align:center"><font size='2' color="white" >-360 to -380 M.y.
+				</span>
+			</button>
+			
+			<button id="ecran", class="ExtIII w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('44250')">
+				III| Permo-triasique
+				<span>
+					<p style="text-align:center"><font size='2' color="white" >-252 to -255 M.y.
+				</span>
+			</button>
+			
+			<button id="ecran", class="ExtIV w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('44680')">
+				IV| Fini-triasique
+				<span>
+					<p style="text-align:center"><font size='2' color="white" >-201 to -227 M.y.
+				</span>
+			</button>
+			
+			<button id="mini", class="ExtV w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('46120')">
+				V| Crétacé-tertiaire
+				<span>
+					<p style="text-align:center"><font size='2' color="white" >-66 M.y.
+				</span>
+			</button>
+			
+			<button id="mini", class="ExtVI w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white"  style="height:40px;padding:5px;" onClick="arbre.goTo('46780')"><img rel="icon "type="image/png" src="images/evo-homo-sapiens.png" style="height:27px" >
+				<span>
+					<p style="text-align:center"><font size='2' color="white" >Today					
+				</span>
+			</button>
+
+			<button id="next" class="plus50 w3-bar-item w3-btn w3-black w3-tiny w3-hover-green w3-text-white w3-hover-text-white" style="height:40px; width:60px;padding:1px;" onClick="arbre.goright()"><i class="material-icons " >arrow_forward</i>
+			</button>
+		</div>
+	</div>
+
+</div>
+
+	
+	<div class="w3-container s12 m12 l12 w3-white divArbre" >
+		<iframe name="arbre" src="tree-canvas.html" height="100%" width="100%" style="border:0px"></iframe>
+	</div>
+
+
+</body>
+</html>
