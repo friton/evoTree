@@ -59,7 +59,7 @@ Seuil d'extinction : variable : **SEUIL_XTINCT**
 
 Il y a un script permettant de parser un JSON pour obtenir un XML.
 
-Il y a également un script permettant à partir de date en milliards d'années de récupérer les coordonnées en pour tracer les Eons, Eres et Epoques dans les canevas.
+Il y a également un script permettant à partir de date en milliards d'années de récupérer les coordonnées en px pour tracer les Eons, Eres et Epoques dans les canevas.
 
 
 
