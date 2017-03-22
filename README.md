@@ -40,7 +40,7 @@ Seuil d'extinction : variable : **SEUIL_XTINCT**
 
 #### Ligne de commande :
 
-```python space.py 5 30 38000``````
+```python space.py 5 30 38000```
 
 5 : zone dans laquelle un noeud d'attraction s'éteind,
 30 : zone dans laquelle un noeud branche est attiré par un noeud d'attraction,
