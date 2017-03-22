@@ -1,7 +1,9 @@
+
+//cette fonction s'execute lors du chargement de la page
 function DrawTree()
 {
 
-window.parent.$('.w3-bar').hide();
+window.parent.$('.w3-bar').hide();//On cache la bar de menu et le curseur
 $('#myP').hide();
 
 var monJson = {};
@@ -12,9 +14,10 @@ var monJson = {};
 		success: function(data) {
 			monJson = data;
 		}
-	});
+	});// on lit le jason contenant les coordonnées des points de l'arbre généré
 	
 	
+	//on dessine l'arbre et la chronologie des temps géologiques
 	var c=document.getElementById("myCanvas");
 	var c2=document.getElementById("myCanvas2");
 	
@@ -36,18 +39,7 @@ var monJson = {};
 	ctt.fillText("A long time ago in a galaxy far, far away....",3000,280);
 	
 	
-	
-	//var x=0;
-	//while(x<=10000)	{
-		
-	//		echelle(x,cty,600);
-	//		echelle(x,ctx2);
-	//		echelle(x,ctx3);
-	//		echelle(x,ctx4);
-	//		echelle(x,ctx5);
-	//		x=x+10;
-	//		}
-// Eons
+	// Eons
 	ctx.fillStyle="#6A0888"; //Hadéen
 	ctx.fillRect(0, 0, 5400, 20);
 	ctx.fillStyle="#B404AE";  //Archéen
@@ -248,62 +240,39 @@ ctx2.scale(1,1);
 	cty2.strokeStyle="#488957";
 	cty2.stroke();
 
-	window.parent.$('.w3-bar').hide();
-	$('#myP').hide();
+	
 
 }
 
 
 
-function echelle(x,ct,step=0) {
-	
-	ct.beginPath();
-	if (x % 100 == 0) {
-			ct.lineWidth=0.8;
-			ct.moveTo(x+step,542.5);
-			ct.lineTo(x+step,557.5);
-			
-			ct.stroke();
-		}
-		else {
-			ct.lineWidth=0.4;
-			ct.moveTo(x+step,550.5);
-			ct.lineTo(x+step,557.5);
-			
-			ct.stroke();
-		}
-		
 
-	
-	
-}
-
-
+//on define les animations associées à l'événemment de scrolling 
 window.onscroll = function() {ScrollEv()};
 function ScrollEv() {
 	
 	var canvas=document.getElementById("myCanvas");
 	var pos=GetPosCanvas(canvas);
 	
-	
+	//animation de la barre de menu avec les extinctions et du curseur de temps
 	if(window.scrollX<=1000)
-    {window.parent.document.getElementById("avant").disabled = true;
+    {
 	window.parent.$('.w3-bar').hide(500);
 	
 	$('#myP').hide(300);	
     }
 
     else if (window.scrollX<=1380)
-	{window.parent.document.getElementById("avant").disabled = true;
+	{
 	window.parent.$('.w3-bar').show(500);
-	document.getElementById("myP").innerHTML='<img rel="icon "type="image/png" src="images/curs2.png"  style="height:17px; width:14px;color:white;"><font size="2">	'+"4.540 Milliards d'ann&#233;es</font>";
+	document.getElementById("myP").innerHTML='<img rel="icon "type="image/png" src="images/curs2.png"  style="height:17px; width:14px;color:white;"><font size="2">	'+"-4.540 Milliards d'ann&#233;es</font>";
 	$('#myP').show(300);
 	
             }
 
 
 	else if (window.scrollX<=46780)
-		{window.parent.document.getElementById("avant").disabled = false;
+		{
 		
 		window.parent.$('.w3-bar').show(500);
 		document.getElementById("myP").innerHTML='<img rel="icon "type="image/png" src="images/curs2.png"  style="height:17px; width:14px;color:white;"><font size="2">	'+((((-4540000000)+((pos.x-1380)*100000)))/1000000000).toFixed(3)+" Milliards d'ann&#233;es</font>";
@@ -311,7 +280,7 @@ function ScrollEv() {
     	}
 
     else if (window.scrollX<=47000)
-		{window.parent.document.getElementById("avant").disabled = false;
+		{
 		
 		window.parent.$('.w3-bar').show(500);
 		document.getElementById("myP").innerHTML='<img rel="icon "type="image/png" src="images/curs2.png"  style="height:17px; width:14px;color:white;"><font size="2">	'+"0.000 Milliards d'ann&#233;es</font>";
@@ -325,17 +294,24 @@ function ScrollEv() {
     }
 
 
-	
+	//on cache également les bouttons +-500M quand on est en dehors des temps
 
-	if(window.scrollX>=47000)
+	if(window.scrollX>=42000)
 	{window.parent.document.getElementById("next").disabled = true;}
 	else
 		{window.parent.document.getElementById("next").disabled = false;}
+
+	if(window.scrollX<=5000)
+	{window.parent.document.getElementById("avant").disabled = true;}
+	else
+	{
+		window.parent.document.getElementById("avant").disabled = false;
+	}
 }
 	
 
 
-
+//fonction qui recupère la position du canvas dans la fenetre
 function GetPosCanvas(canvas) {
 		var rect = canvas.getBoundingClientRect();
 		return {
@@ -345,7 +321,7 @@ function GetPosCanvas(canvas) {
 
 
 
-
+//on definit l'action du boutton -500Ma
 function goleft()
 {
 	
@@ -362,7 +338,7 @@ else{
 function goright()
 {
 console.log(window.scrollX);
-if(window.scrollX>349900)
+if(window.scrollX>47000)
 	{window.parent.document.getElementById("next").disabled = true;}
 	else
 		{window.parent.document.getElementById("next").disabled = false;
@@ -371,12 +347,14 @@ if(window.scrollX>349900)
     
 }
 
+//fonction pour se déplacer jusqu'aux différentes extinctions
 function goTo(x)
 {
 
 	$('html, body').animate( { scrollLeft: x }, 10000);
 }
 
+//on personnalise le 'hover' des bouttons + et - 500Ma
  $(document).ready(function() {
     $('.-50').hover(function() {
       $(this).html('- 500 M.y.');
